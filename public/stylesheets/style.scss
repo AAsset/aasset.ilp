@@ -677,7 +677,7 @@ h1 {
 
 .inside-object {
   width: calc(100vw - 5rem);
-  padding: 1.9rem calc(1.9rem + 15px);
+  padding: 1.9rem calc(1.8rem);
   max-height: 100vh;
   overflow-y: auto;
   .upper-head {
@@ -706,7 +706,7 @@ h1 {
     }
   }
   .tasks {
-    width: 40%;
+    min-width: 40%;
     background: #fff;
     box-shadow: 0 1px 4px 0 rgba(53, 56, 63, 0.1);
     padding: 1.3rem 0;
@@ -755,7 +755,7 @@ h1 {
     }
   }
   .about-this {
-    width: calc(60% - 1.7rem);
+    min-width: calc(60% - 1.7rem);
     background: #fff;
     box-shadow: 0 1px 4px 0 rgba(53, 56, 63, 0.1);
     padding: 1.3rem 0;
@@ -763,7 +763,7 @@ h1 {
     border-radius: 7px;
     h2 {
       padding: 0rem 1.3rem;
-      padding-right: 8rem;
+      // padding-right: 4rem;
       color: $dark;
       font-weight: 500;
       font-size: 1.3rem;
@@ -812,7 +812,7 @@ h1 {
       padding: 0;
     }
     .deadline {
-      font-size: 1rem;
+      font-size: 0.85rem;
       font-weight: 500;
       color: $tomato-two;
       white-space: nowrap;
@@ -821,7 +821,7 @@ h1 {
   }
 
   .comments {
-    width: 40%;
+    min-width: 40%;
     p {
       color: $dark;
       font-size: 1rem;
