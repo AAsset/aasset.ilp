@@ -10,6 +10,37 @@
     <link rel='stylesheet' href='public/stylesheets/normalize.css'/>
     <link rel='stylesheet' href='public/stylesheets/style.css'/>
 
+    <style>
+        @media (min-width: 577px) {
+            .mobile-menu {
+                display: none !important;
+            }
+        }
+        @media (max-width: 576px) {
+            .inside-object {
+                width: calc(100vw);
+            }
+            .mobile-menu {
+                display: block !important;
+                padding: .5rem !important;
+            }
+            .left-menu {
+                left: -285px;
+                position: fixed;
+                z-index: 1;
+                transition: .3s;
+            }
+        }
+        .show-menu {
+            left: 0;
+        }
+        .mobile-menu-btn {
+            border: none;
+        }
+        .mobile-menu-icon {
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body class="d-flex">
 
@@ -25,9 +56,15 @@
 </div>
 
 <div class="inside-object">
+
     <div class="upper-head d-flex align-items-center justify-content-between">
+        <nav class="navbar navbar-light mobile-menu">
+            <button class="navbar-toggler mobile-menu-btn" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon mobile-menu-icon"></span>
+            </button>
+        </nav>
         <h1>Видеоурок</h1>
-        <div class="d-flex align-items-center">
+        <div class="d-flex align-items-center mx-4">
             <div class="timer d-flex align-items-center">
                 <img class="mr-2" src="public/images/timer.png" alt="">
                 <p>20 дней 16:20:59</p>
@@ -176,6 +213,16 @@
                 // Replace IMG with SVG
                 $img.replaceWith($svg);
             }, 'xml');
+        });
+
+        $('.mobile-menu-btn').click(function(e) {
+            e.stopPropagation();
+            $(".left-menu").toggleClass('show-menu')
+        });
+        $('body').click(function(e) {
+            if ($('.left-menu').hasClass('show-menu')) {
+                $(".left-menu").toggleClass('show-menu')
+            }
         });
     });
 </script>
