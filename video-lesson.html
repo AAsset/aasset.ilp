@@ -15,6 +15,9 @@
             .mobile-menu {
                 display: none !important;
             }
+            .mobile-logo {
+                display: none;
+            }
         }
         @media (max-width: 576px) {
             .inside-object {
@@ -22,13 +25,16 @@
             }
             .mobile-menu {
                 display: block !important;
-                padding: .5rem !important;
+                padding: 0 !important;
             }
             .left-menu {
                 left: -285px;
                 position: fixed;
                 z-index: 1;
                 transition: .3s;
+            }
+            .mobile-logo {
+                display: block;
             }
         }
         .show-menu {
@@ -39,6 +45,10 @@
         }
         .mobile-menu-icon {
             cursor: pointer;
+        }
+        .head-title {
+            display: inline-flex;
+            align-items: center;
         }
     </style>
 </head>
@@ -63,8 +73,11 @@
                 <span class="navbar-toggler-icon mobile-menu-icon"></span>
             </button>
         </nav>
-        <h1>Видеоурок</h1>
-        <div class="d-flex align-items-center mx-4">
+        <h1 class="head-title"> 
+            <a href="index.html" class="mobile-logo logo mx-2"><img width="36" height="32" src="public/images/logo.png" alt=""></a>
+            Видеоурок
+        </h1>
+        <div class="d-flex align-items-center mx-3">
             <div class="timer d-flex align-items-center">
                 <img class="mr-2" src="public/images/timer.png" alt="">
                 <p>20 дней 16:20:59</p>
