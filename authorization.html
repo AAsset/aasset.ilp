@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=7; IE=Edge">
+    <title>
+        ILT
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <link rel='stylesheet' href='public/stylesheets/normalize.css'/>
+    <link rel='stylesheet' href='public/stylesheets/style.css'/>
+
+</head>
+<body class="gradient-bg d-flex">
+
+<div class="authorization d-flex align-items-center justify-content-end">
+    <img class="top-left-image" src="public/images/logo-auth.png" alt="">
+    <div class="auth-block d-flex w-50">
+        <div class="sign-in d-flex flex-column w-100">
+            <ul class="d-flex w-100 align-items-end">
+                <li class="click-funciton1 active">Вход <div class="border-inside"></div></li>
+                <li class="click-funciton2">Регистрация <div class="border-inside"></div></li>
+                <hr>
+            </ul>
+            <form id="auth-form"  method="post" class="flex-column">
+                <div class="form-group">
+                    <label for="email-input">E-mail</label>
+                    <input type="email" class="form-control" required id="email-input" aria-describedby="emailHelp" placeholder="Введите ваш E-mail...">
+                </div>
+                <div class="form-group d-flex flex-column">
+                    <label for="pass_log_id">Пароль</label>
+                    <div class="password-input d-flex align-items-center">
+                        <input id="pass_log_id" type="password" required name="pass">
+                        <span toggle="#password-field" class="fa fa-fw fa-eye field_icon toggle-password"></span>
+                    </div>
+                </div>
+                <button type="submit">Вход</button>
+            </form>
+            <form id="reg-form" method="post" class="flex-column">
+                <div class="form-group mb-30">
+                    <label for="email-input">E-mail</label>
+                    <input type="email" class="form-control" required id="email-input" aria-describedby="emailHelp" placeholder="Введите ваш E-mail...">
+                </div>
+                <div class="form-group mb-30 d-flex flex-column">
+                    <label for="pass_log_id">Пароль</label>
+                    <div class="password-input d-flex align-items-center">
+                        <input id="pass_log_id" type="password" required name="pass">
+                        <span toggle="#password-field" class="fa fa-fw fa-eye field_icon toggle-password"></span>
+                    </div>
+                </div>
+                <div class="form-group d-flex flex-column">
+                    <label for="pass_log_id">Подтвердите пароль</label>
+                    <div class="password-input d-flex align-items-center">
+                        <input id="pass_log_id" type="password" required name="pass">
+                        <span toggle="#password-field" class="fa fa-fw fa-eye field_icon toggle-password"></span>
+                    </div>
+                </div>
+                <button type="submit">Далее</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script language="JavaScript" type="text/javascript" src="public/libs/jquery/dist/jquery.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="public/libs/popper.js/dist/umd/popper.js"></script>
+<script language="JavaScript" type="text/javascript" src="public/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+        $(".click-funciton1").click(function () {
+            $(".click-funciton1").addClass("active");
+            $(".click-funciton2").removeClass("active");
+            $("#auth-form").css("display", "flex");
+            $("#reg-form").css("display", "none");
+        });
+        $(".click-funciton2").click(function () {
+            $(".click-funciton2").addClass("active");
+            $(".click-funciton1").removeClass("active");
+            $("#auth-form").css("display", "none");
+            $("#reg-form").css("display", "flex");
+        });
+
+        $("#auth-form").on("submit",function(e) {
+            e.preventDefault(); // cancel submission
+            window.location.replace("index.html");
+        });
+        $("#reg-form").on("submit",function(e) {
+            e.preventDefault(); // cancel submission
+            window.location.replace("registration.html");
+        });
+
+        $('img[src$=".svg"]').each(function() {
+            var $img = jQuery(this);
+            var imgURL = $img.attr('src');
+            var attributes = $img.prop("attributes");
+
+            $.get(imgURL, function(data) {
+                // Get the SVG tag, ignore the rest
+                var $svg = jQuery(data).find('svg');
+
+                // Remove any invalid XML tags
+                $svg = $svg.removeAttr('xmlns:a');
+
+                // Loop through IMG attributes and apply on SVG
+                $.each(attributes, function() {
+                    $svg.attr(this.name, this.value);
+                });
+
+                // Replace IMG with SVG
+                $img.replaceWith($svg);
+            }, 'xml');
+        });
+    });
+
+    $(document).on('click', '.toggle-password', function() {
+
+        $(this).toggleClass("fa-eye fa-eye-slash");
+
+        var input = $("#pass_log_id");
+        input.attr('type') === 'password' ? input.attr('type','text') : input.attr('type','password')
+    });
+</script>
+</body>
+</html>
