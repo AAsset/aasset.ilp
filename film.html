@@ -25,9 +25,18 @@
 </div>
 
 <div class="inside-object">
+
     <div class="upper-head d-flex align-items-center justify-content-between">
-        <h1>Фильм</h1>
-        <div class="d-flex align-items-center">
+        <nav class="navbar navbar-light mobile-menu">
+            <button class="navbar-toggler mobile-menu-btn" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon mobile-menu-icon"></span>
+            </button>
+        </nav>
+        <h1 class="head-title">
+            <a href="index.html" class="mobile-logo logo mx-2"><img width="36" height="32" src="public/images/logo.png" alt=""></a>
+            Фильм
+        </h1>
+        <div class="d-flex align-items-center mx-3">
             <div class="timer d-flex align-items-center">
                 <img class="mr-2" src="public/images/timer.png" alt="">
                 <p>20 дней 16:20:59</p>
@@ -55,86 +64,97 @@
             </div>
         </div>
     </div>
-    <div class="d-flex">
-        <div class="main-media-cover h-auto">
-            <div class="main-media">
-                <iframe width="100%" height="400" src="https://www.youtube.com/embed/JLSZr6w5fn4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <div class="container-fluid">
+        <div class="d-flex row">
+            <div class="mb-4 col-12 col-sm-12 col-md-7">
+
+            <div class="h-auto mb-4">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/JLSZr6w5fn4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
             </div>
-        </div>
-        <div class="tasks d-flex flex-column justify-content-between h-auto">
-            <div>
-                <h2>Задача №1.</h2>
+
+            <div class="about-this h-auto">
+                <div class="d-flex justify-content-between align-items-start">
+                    <h2>Фильм №1: Гении дизайна. Часть 1.</h2>
+                    <div class="time-clock d-flex align-items-center">
+                        <img class="calendar-icon mr-2" src="public/images/calendar-icon.svg" alt="">
+                        <p class="deadline">Осталось 23ч : 10м</p>
+                    </div>
+                </div>
                 <hr>
-                <p><strong>Ваша задача после просмотра фильма:</strong>
+                <p>
+                    Эта серия рассказывает о первом поколении дизайнеров, которые схватились за рычаги индустриальной машины, которая была запущена с целью удовлетворения основной капиталистической потребности - производить большее количество за меньшие деньги.
 
-                    1. Необходимо найти еще информации вне фильма касательно данного фильма.
-
-                    <strong>Формат сдачи работы:</strong> прикрепленный файл.
-
+                    <strong>Посмотрите фильм, выполните задание и оставьте комментарий. Выполненные вами задачи и написанные комментарии принесет вам дополнительные баллы.</strong>
                 </p>
             </div>
-            <a href="" class="attached-file d-flex align-items-center">
-                <div class="logo-file d-flex align-items-center justify-content-center"><img src="public/images/attach.svg" alt=""></div>
-                <div class="d-flex flex-column ml-2">
-                    <h6>Гении-дизайна-1.txt</h6>
-                    <p>1.7 MB</p>
+
+            </div>
+
+            <div class="justify-content-between h-auto mb-4 col-12 col-sm-12 col-md-5">
+
+            <div class="tasks mb-4">
+                <div>
+                    <h2>Задача №1.</h2>
+                    <hr>
+                    <p><strong>Ваша задача после просмотра фильма:</strong>
+
+                        1. Необходимо найти еще информации вне фильма касательно данного фильма.
+
+                        <strong>Формат сдачи работы:</strong> прикрепленный файл.
+
+                    </p>
                 </div>
-            </a>
+                <a href="" class="attached-file d-flex align-items-center">
+                    <div class="logo-file d-flex align-items-center justify-content-center"><img src="public/images/attach.svg" alt=""></div>
+                    <div class="d-flex flex-column ml-2">
+                        <h6>Гении-дизайна-1.txt</h6>
+                        <p>1.7 MB</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="comments h-auto">
+                <p><strong>Оставьте 10 комментариев</strong></p>
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Напишите ответ ..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button"><img src="public/images/share.svg" alt=""></button>
+                    </div>
+                </div>
+
+                <div class="comments-list d-flex flex-column">
+                    <div class="comment d-flex justify-content-between mb-4">
+                        <img class="avatar-image" src="public/images/avatar.png" alt="">
+                        <div class="d-flex flex-column mx-3">
+                            <p class="mb-1"><strong>Айым Мухаметкали</strong></p>
+                            <p>Вот что отделяет хороших дизайнеров от великих. Хорошие дизайнеры полагаются на свои технические навыки и основывают свой дизайн на принципах, но великие дизайнеры привносят в уравнение что-то свое.</p>
+                        </div>
+                        <div class="cover-delete">
+                            <img class="delete-image" src="public/images/delete.svg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="comment d-flex justify-content-between">
+                        <img class="avatar-image" src="public/images/avatar.png" alt="">
+                        <div class="d-flex flex-column mx-3">
+                            <p class="mb-1"><strong>Айым Мухаметкали</strong></p>
+                            <p>Вот что отделяет хороших дизайнеров от великих. Хорошие дизайнеры полагаются на свои технические навыки и основывают свой дизайн на принципах, но великие дизайнеры привносят в уравнение что-то свое.</p>
+                        </div>
+                        <div class="cover-delete">
+                            <img class="delete-image" src="public/images/delete.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
         </div>
     </div>
 
-    <div class="d-flex pt-4">
-        <div class="about-this h-auto">
-            <div class="d-flex justify-content-between align-items-start">
-                <h2>Фильм №1: Гении дизайна. Часть 1.</h2>
-                <div class="time-clock d-flex align-items-center">
-                    <img class="calendar-icon mr-3" src="public/images/calendar-icon.svg" alt="">
-                    <p class="deadline">Осталось 23ч : 10м</p>
-                </div>
-            </div>
-            <hr>
-            <p>
-                Эта серия рассказывает о первом поколении дизайнеров, которые схватились за рычаги индустриальной машины, которая была запущена с целью удовлетворения основной капиталистической потребности - производить большее количество за меньшие деньги.
-
-                <strong>Посмотрите фильм, выполните задание и оставьте комментарий. Выполненные вами задачи и написанные комментарии принесет вам дополнительные баллы.</strong>
-            </p>
-        </div>
-
-        <div class="comments h-auto">
-            <p><strong>Оставьте 10 комментариев</strong></p>
-
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Напишите ответ ..." aria-label="Recipient's username" aria-describedby="basic-addon2">
-                <div class="input-group-append">
-                    <button class="btn btn-outline-secondary" type="button"><img src="public/images/share.svg" alt=""></button>
-                </div>
-            </div>
-
-            <div class="comments-list d-flex flex-column">
-                <div class="comment d-flex justify-content-between mb-4">
-                    <img class="avatar-image" src="public/images/avatar.png" alt="">
-                    <div class="d-flex flex-column mx-4">
-                        <p class="mb-1"><strong>Айым Мухаметкали</strong></p>
-                        <p>Вот что отделяет хороших дизайнеров от великих. Хорошие дизайнеры полагаются на свои технические навыки и основывают свой дизайн на принципах, но великие дизайнеры привносят в уравнение что-то свое.</p>
-                    </div>
-                    <div class="cover-delete">
-                        <img class="delete-image" src="public/images/delete.svg" alt="">
-                    </div>
-                </div>
-
-                <div class="comment d-flex justify-content-between">
-                    <img class="avatar-image" src="public/images/avatar.png" alt="">
-                    <div class="d-flex flex-column mx-4">
-                        <p class="mb-1"><strong>Айым Мухаметкали</strong></p>
-                        <p>Вот что отделяет хороших дизайнеров от великих. Хорошие дизайнеры полагаются на свои технические навыки и основывают свой дизайн на принципах, но великие дизайнеры привносят в уравнение что-то свое.</p>
-                    </div>
-                    <div class="cover-delete">
-                        <img class="delete-image" src="public/images/delete.svg" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
 
 
@@ -164,6 +184,16 @@
                 // Replace IMG with SVG
                 $img.replaceWith($svg);
             }, 'xml');
+        });
+
+        $('.mobile-menu-btn').click(function(e) {
+            e.stopPropagation();
+            $(".left-menu").toggleClass('show-menu')
+        });
+        $('body').click(function(e) {
+            if ($('.left-menu').hasClass('show-menu')) {
+                $(".left-menu").toggleClass('show-menu')
+            }
         });
     });
 </script>
