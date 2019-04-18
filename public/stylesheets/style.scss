@@ -1567,6 +1567,12 @@ h1 {
   .mobile-logo {
     display: none;
   }
+  .menu-header-mobile {
+    display: none !important;
+  }
+  .menu-header-usual {
+    display: block !important;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1578,11 +1584,20 @@ h1 {
     display: block !important;
     padding: 0 !important;
   }
+
   .left-menu {
     left: -285px;
     position: fixed;
     z-index: 1;
     transition: .3s;
+  }
+
+  .menu-header-mobile {
+    display: block !important;
+  }
+
+  .menu-header-usual {
+    display: none !important;
   }
 
   .show-menu {
