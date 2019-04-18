@@ -1570,34 +1570,42 @@ h1 {
 }
 
 @media (max-width: 576px) {
-  .inside-object {
-      width: calc(100vw);
+  .inside-object, .programms {
+    width: calc(100vw);
   }
+
   .mobile-menu {
-      display: block !important;
-      padding: 0 !important;
+    display: block !important;
+    padding: 0 !important;
   }
   .left-menu {
-      left: -285px;
-      position: fixed;
-      z-index: 1;
-      transition: .3s;
+    left: -285px;
+    position: fixed;
+    z-index: 1;
+    transition: .3s;
   }
-  .mobile-logo {
-      display: block;
+
+  .show-menu {
+    left: 0;
   }
-}
 
-.show-menu {
-  left: 0;
-}
+  .mobile-menu-btn {
+    border: none;
+    padding: .25rem !important;
+  }
 
-.mobile-menu-btn {
-  border: none;
-}
+  .mobile-menu-icon {
+    cursor: pointer;
+  }
 
-.mobile-menu-icon {
-  cursor: pointer;
+  .mobile-logo img {
+    width: 33px;
+    height: 30px;
+  }
+
+  .head-title {
+    font-size: 1.3rem;
+  }
 }
 
 .head-title {
