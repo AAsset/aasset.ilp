@@ -1615,25 +1615,22 @@ h1 {
       padding: 1rem 0;
       margin: 0;
       border-radius: 7px;
-    }
-
-    .menu-header li {
-      padding: 1.2rem;
-      margin: 0 20%;
-      border: 0;
-    }
-
-    .menu-header a {
-      font-size: 1.5rem;
-    }
-
-    .menu-header a img {
-      width: 1.5rem;
-      height: 1.5rem;
-      margin-right: .9rem;
-    }
-    .menu-header .active {
-      color:#4072ee;
+      li {
+        padding: 1.2rem;
+        margin: 0 20%;
+        border: 0;
+      }
+      a {
+        font-size: 1.5rem;
+        img, svg {
+          width: 1.5rem;
+          height: 1.5rem;
+          margin-right: .9rem;
+        }
+      }
+      .active {
+        color:#4072ee;
+      }
     }
   }
 }
