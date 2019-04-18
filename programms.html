@@ -26,8 +26,16 @@
 
 <div class="programms">
     <div class="upper-head d-flex align-items-center justify-content-between">
-        <h1>Программа</h1>
-        <div class="d-flex align-items-center">
+        <nav class="navbar navbar-light mobile-menu">
+            <button class="navbar-toggler mobile-menu-btn" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon mobile-menu-icon"></span>
+            </button>
+        </nav>
+        <h1 class="head-title">
+            <a href="index.html" class="mobile-logo logo mx-2"><img src="public/images/logo.png" alt=""></a>
+            Программа
+        </h1>
+        <div class="d-flex align-items-center mx-3">
             <div class="timer d-flex align-items-center">
                 <img class="mr-2" src="public/images/timer.png" alt="">
                 <p>20 дней 16:20:59</p>
@@ -55,16 +63,38 @@
             </div>
         </div>
     </div>
-    <ul class="menu-header d-flex align-items-center">
-        <li class="active"><a href="programms.html"><img src="public/images/video.png" alt="">Видеоуроки</a></li>
-        <li><a href="programms-books.html"><img src="public/images/book.svg" alt="">Книги</a></li>
-        <li><a href="programms-films.html"><img src="public/images/movie.svg" alt="">Фильмы</a></li>
-        <li><a href="programms-quests.html"><img src="public/images/quest.svg" alt="">Квесты</a></li>
-    </ul>
+    <div class="container-fluid d-block d-sm-none">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <ul class="list-group list-group-flush menu-header">
+                    <li class="menu-header-item active">
+                        <a class="d-flex align-items-center" href="programms.html"><img src="public/images/video-inactive.png" alt="">Видеоуроки</a>
+                    </li>
+                    <li class="menu-header-item">
+                        <a href="programms-books.html"><img src="public/images/book.svg" alt="">Книги</a>
+                    </li>
+                    <li class="menu-header-item">
+                        <a href="programms-films.html"><img src="public/images/movie.svg" alt="">Фильмы</a>
+                    </li>
+                    <li class="menu-header-item">
+                        <a href="programms-quests.html"><img src="public/images/quest.svg" alt="">Квесты</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="d-none d-sm-block">
+        <ul class="menu-header d-flex align-items-center">
+            <li class="active"><a href="programms.html"><img src="public/images/video.png" alt="">Видеоуроки</a></li>
+            <li><a href="programms-books.html"><img src="public/images/book.svg" alt="">Книги</a></li>
+            <li><a href="programms-films.html"><img src="public/images/movie.svg" alt="">Фильмы</a></li>
+            <li><a href="programms-quests.html"><img src="public/images/quest.svg" alt="">Квесты</a></li>
+        </ul>
+    </div>
 
     <div class="container-fluid mt-4">
         <div class="row">
-            <div class="col-3 d-flex">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
                 <a href="video-lesson.html" class="badges d-flex flex-column justify-content-between">
                     <div class="d-flex flex-column mb-1">
                         <img src="public/images/video-1.jpg" alt="">
@@ -77,7 +107,7 @@
                 </a>
             </div>
 
-            <div class="col-3 d-flex">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
                 <a href="video-lesson.html" class="badges d-flex flex-column justify-content-between">
                     <div class="d-flex flex-column mb-1">
                         <img src="public/images/video-2.jpg" alt="">
@@ -90,7 +120,7 @@
                 </a>
             </div>
 
-            <div class="col-3 d-flex">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
                 <a href="video-lesson.html" class="badges d-flex flex-column justify-content-between">
                     <div class="d-flex flex-column mb-1">
                         <img src="public/images/video-3.jpg" alt="">
@@ -103,7 +133,7 @@
                 </a>
             </div>
 
-            <div class="col-3 d-flex">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
                 <a href="video-lesson.html" class="badges d-flex flex-column justify-content-between">
                     <div class="d-flex flex-column mb-1">
                         <img src="public/images/video-4.jpg" alt="">
@@ -116,7 +146,7 @@
                 </a>
             </div>
 
-            <div class="col-3 d-flex">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
                 <a href="video-lesson.html" class="badges d-flex flex-column justify-content-between">
                     <div class="d-flex flex-column mb-1">
                         <img src="public/images/video-5.jpg" alt="">
@@ -129,7 +159,7 @@
                 </a>
             </div>
 
-            <div class="col-3 d-flex">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
                 <a href="video-lesson.html" class="badges d-flex flex-column justify-content-between">
                     <div class="d-flex flex-column mb-1">
                         <img src="public/images/video-6.jpg" alt="">
@@ -142,7 +172,7 @@
                 </a>
             </div>
 
-            <div class="col-3 d-flex">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
                 <a href="video-lesson.html" class="badges d-flex flex-column justify-content-between">
                     <div class="d-flex flex-column mb-1">
                         <img src="public/images/video-7.jpg" alt="">
@@ -156,7 +186,7 @@
                 </a>
             </div>
 
-            <div class="col-3 d-flex">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
                 <a href="video-lesson.html" class="badges d-flex flex-column justify-content-between">
                     <div class="d-flex flex-column mb-1">
                         <img src="public/images/video-8.jpg" alt="">
@@ -170,7 +200,7 @@
                 </a>
             </div>
 
-            <div class="col-3 d-flex">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
                 <a href="video-lesson.html" class="badges d-flex flex-column justify-content-between">
                     <div class="d-flex flex-column mb-1">
                         <img src="public/images/video-9.jpg" alt="">
@@ -184,7 +214,7 @@
                 </a>
             </div>
 
-            <div class="col-3 d-flex">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
                 <a href="video-lesson.html" class="badges d-flex flex-column justify-content-between">
                     <div class="d-flex flex-column mb-1">
                         <img src="public/images/video-10.jpg" alt="">
@@ -198,7 +228,7 @@
                 </a>
             </div>
 
-            <div class="col-3 d-flex">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
                 <a href="video-lesson.html" class="badges d-flex flex-column justify-content-between">
                     <div class="d-flex flex-column mb-1">
                         <img src="public/images/video-11.jpg" alt="">
@@ -212,7 +242,7 @@
                 </a>
             </div>
 
-            <div class="col-3 d-flex">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
                 <a href="video-lesson.html" class="badges d-flex flex-column justify-content-between">
                     <div class="d-flex flex-column mb-1">
                         <img src="public/images/video-12.jpg" alt="">
@@ -257,6 +287,16 @@
                 // Replace IMG with SVG
                 $img.replaceWith($svg);
             }, 'xml');
+        });
+
+        $('.mobile-menu-btn').click(function(e) {
+            e.stopPropagation();
+            $(".left-menu").toggleClass('show-menu')
+        });
+        $('body').click(function(e) {
+            if ($('.left-menu').hasClass('show-menu')) {
+                $(".left-menu").toggleClass('show-menu')
+            }
         });
     });
 </script>

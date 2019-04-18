@@ -1562,10 +1562,10 @@ h1 {
 
 @media (min-width: 577px) {
   .mobile-menu {
-      display: none !important;
+    display: none !important;
   }
   .mobile-logo {
-      display: none;
+    display: none;
   }
 }
 
@@ -1605,6 +1605,36 @@ h1 {
 
   .head-title {
     font-size: 1.3rem;
+  }
+
+  .programs {
+    .menu-header {
+      -webkit-box-shadow: 0 1px 4px 0 #d6dcea;
+      box-shadow: 0 1px 4px 0 #d6dcea;
+      background: #fff;
+      padding: 1rem 0;
+      margin: 0;
+      border-radius: 7px;
+    }
+
+    .menu-header li {
+      padding: 1.2rem;
+      margin: 0 20%;
+      border: 0;
+    }
+
+    .menu-header a {
+      font-size: 1.5rem;
+    }
+
+    .menu-header a img {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-right: .9rem;
+    }
+    .menu-header .active {
+      color:#4072ee;
+    }
   }
 }
 
