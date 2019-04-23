@@ -17,8 +17,8 @@
     <a href="index.html" class="logo"><img src="public/images/logo.png" alt=""></a>
     <ul class="d-flex flex-column w-100">
         <li><a href="index.html"><img src="public/images/stats-inactive.png" alt=""></a></li>
-        <li><a href="programms.html"><img src="public/images/maps.png" alt=""></a></li>
-        <li class="active"><a href="tests.html"><img src="public/images/files-inactive.png" alt=""></a></li>
+        <li><a href="programms.html"><img src="public/images/maps-inactive.png" alt=""></a></li>
+        <li class="active"><a href="tests.html"><img src="public/images/files.png" alt=""></a></li>
         <li><a href=""><img src="public/images/settings-inactive.png" alt=""></a></li>
     </ul>
     <a href="" class="faq"><img src="public/images/question.png" alt=""></a>
@@ -32,10 +32,19 @@
                 <img class="mr-2" src="public/images/timer.png" alt="">
                 <p>20 дней 16:20:59</p>
             </div>
-            <a class="bell mx-4" href="">
-                <img class="bell-icon" src="public/images/bell.png" alt="">
-                <img class="status-icon" src="public/images/status.png" alt="">
-            </a>
+            <div class="dropdown">
+                <a class="bell mx-4" id="dropdownNotification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img class="bell-icon" src="public/images/bell.png" alt="">
+                    <img class="status-icon" src="public/images/status.png" alt="">
+                </a>
+                <div class="dropdown-menu dropdown-menu-right mt-4" aria-labelledby="dropdownNotification">
+                    <h2 class="mb-3">Уведомление</h2>
+                    <a class="dropdown-item d-flex align-items-center mb-3 mx-3">
+                        <img class="svg-icon mr-1" src="public/images/bell.png" alt="">
+                        <p>У вас пока нет уведомление</p>
+                    </a>
+                </div>
+            </div>
             <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <img src="public/images/avatar.png" alt="">
