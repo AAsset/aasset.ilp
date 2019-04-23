@@ -12367,7 +12367,8 @@ h1 {
 
     .inside-object,
     .programms,
-    .content {
+    .content,
+    .tests {
         width: calc(100vw);
     }
 

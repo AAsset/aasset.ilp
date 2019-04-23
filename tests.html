@@ -26,8 +26,16 @@
 
 <div class="tests">
     <div class="upper-head d-flex align-items-center justify-content-between">
-        <h1>Тесты</h1>
-        <div class="d-flex align-items-center">
+        <nav class="navbar navbar-light mobile-menu">
+            <button class="navbar-toggler mobile-menu-btn" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon mobile-menu-icon"></span>
+            </button>
+        </nav>
+        <h1 class="head-title">
+            <a href="index.html" class="mobile-logo logo mx-2"><img src="public/images/logo.png" alt=""></a>
+            Тесты
+        </h1>
+        <div class="d-flex align-items-center mx-3">
             <div class="timer d-flex align-items-center">
                 <img class="mr-2" src="public/images/timer.png" alt="">
                 <p>20 дней 16:20:59</p>
@@ -58,7 +66,7 @@
 
     <div class="container-fluid mt-4">
         <div class="row">
-            <div class="col-3 d-flex">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 d-flex">
                 <a href="test.html" class="badges d-flex flex-column justify-content-between">
                     <div class="d-flex flex-column mb-1">
                         <img src="public/images/video-1.jpg" alt="">
@@ -75,7 +83,7 @@
                 </a>
             </div>
 
-            <div class="col-3 d-flex">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 d-flex">
                 <a href="test.html" class="badges d-flex flex-column justify-content-between">
                     <div class="d-flex flex-column mb-1">
                         <img src="public/images/video-2.jpg" alt="">
@@ -93,7 +101,7 @@
                 </a>
             </div>
 
-            <div class="col-3 d-flex">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 d-flex">
                 <a href="test.html" class="badges d-flex flex-column justify-content-between">
                     <div class="d-flex flex-column mb-1">
                         <img src="public/images/video-3.jpg" alt="">
@@ -111,7 +119,7 @@
                 </a>
             </div>
 
-            <div class="col-3 d-flex">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 d-flex">
                 <a href="test.html" class="badges d-flex flex-column justify-content-between">
                     <div class="d-flex flex-column mb-1">
                         <img src="public/images/video-4.jpg" alt="">
@@ -128,7 +136,7 @@
                 </a>
             </div>
 
-            <div class="col-3 d-flex">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 d-flex">
                 <a href="test.html" class="badges d-flex flex-column justify-content-between">
                     <div class="d-flex flex-column mb-1">
                         <img src="public/images/video-5.jpg" alt="">
@@ -146,7 +154,7 @@
                 </a>
             </div>
 
-            <div class="col-3 d-flex">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 d-flex">
                 <a href="test.html" class="badges d-flex flex-column justify-content-between">
                     <div class="d-flex flex-column mb-1">
                         <img src="public/images/video-6.jpg" alt="">
@@ -163,7 +171,7 @@
                 </a>
             </div>
 
-            <div class="col-3 d-flex">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 d-flex">
                 <a href="test.html" class="badges d-flex flex-column justify-content-between">
                     <div class="d-flex flex-column mb-1">
                         <img src="public/images/video-7.jpg" alt="">
@@ -180,7 +188,7 @@
                 </a>
             </div>
 
-            <div class="col-3 d-flex">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 d-flex">
                 <a href="test.html" class="badges d-flex flex-column justify-content-between">
                     <div class="d-flex flex-column mb-1">
                         <img src="public/images/video-8.jpg" alt="">
@@ -229,6 +237,16 @@
                 // Replace IMG with SVG
                 $img.replaceWith($svg);
             }, 'xml');
+        });
+
+        $('.mobile-menu-btn').click(function(e) {
+            e.stopPropagation();
+            $('.left-menu').toggleClass('show-menu')
+        });
+        $('body').click(function(e) {
+            if ($('.left-menu').hasClass('show-menu')) {
+                $('.left-menu').toggleClass('show-menu')
+            }
         });
     });
 </script>
