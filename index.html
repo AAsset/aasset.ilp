@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel='stylesheet' href='public/stylesheets/normalize.css'/>
     <link rel='stylesheet' href='public/stylesheets/style.css'/>
+
 </head>
 <body class="d-flex">
 
@@ -25,8 +26,16 @@
 
 <div class="content">
     <div class="upper-head d-flex align-items-center justify-content-between">
-        <h1>Главная</h1>
-        <div class="d-flex align-items-center">
+        <nav class="navbar navbar-light mobile-menu">
+            <button class="navbar-toggler mobile-menu-btn" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon mobile-menu-icon"></span>
+            </button>
+        </nav>
+        <h1 class="head-title">
+            <a href="index.html" class="mobile-logo logo mx-2"><img src="public/images/logo.png" alt=""></a>
+            Главная
+        </h1>
+        <div class="d-flex align-items-center mx-3">
             <div class="timer d-flex align-items-center">
                 <img class="mr-2" src="public/images/timer.png" alt="">
                 <p>20 дней 16:20:59</p>
@@ -54,238 +63,232 @@
             </div>
         </div>
     </div>
-    <div class="row mx-0 mt-5">
-        <div class="col-4">
-            <div class="charts d-flex h-100">
-                <div class="chart-container">
-                    <canvas id="myChart"></canvas>
-                    <img class="image-inside" src="public/images/file-green.png" alt="">
-                </div>
-                <div class="text-inside d-flex flex-column justify-content-between py-3">
-                    <p class="first-text"></p>
-                    <p class="sub-text">Общий балл</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-4">
-            <div class="charts d-flex h-100">
-                <div class="chart-container">
-                    <canvas id="myChart2"></canvas>
-                    <img class="image-inside" src="public/images/tick.png" alt="">
-                </div>
-                <div class="text-inside d-flex flex-column justify-content-between py-3">
-                    <p class="second-text"></p>
-                    <p class="sub-text">Пройдено</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-4">
-            <div class="charts d-flex h-100">
-                <div class="chart-container">
-                    <canvas id="myChart3"></canvas>
-                    <img class="image-inside" src="public/images/stats-blue.png" alt="">
-                </div>
-                <div class="text-inside d-flex flex-column justify-content-between py-3">
-                    <p class="third-text"></p>
-                    <p class="sub-text">В общем рейтинге</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row mx-0 mt-4">
-        <div class="col-4">
-            <div class="charts-2 d-flex flex-column h-100">
-                <div class="d-flex align-items-center justify-content-between charts-margin">
-                    <h2>Программа</h2>
-                    <div class="styled">
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option>Июль 2019</option>
-                            <option>Август 2019</option>
-                            <option>Сентябрь 2019</option>
-                        </select>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 mx-0 mt-4 h-100">
+                <div class="charts d-flex">
+                    <div class="chart-container">
+                        <canvas id="myChart"></canvas>
+                        <img class="image-inside" src="public/images/file-green.png" alt="">
+                    </div>
+                    <div class="text-inside d-flex flex-column justify-content-between py-3">
+                        <p class="first-text"></p>
+                        <p class="sub-text">Общий балл</p>
                     </div>
                 </div>
-                <div class="cover-chart">
-                    <canvas id="myChart4" width="100%" height="250"></canvas>
-                </div>
-                <div class="d-flex flex-column mt-4">
-                    <div class="d-flex align-items-center justify-content-between mb-3">
-                        <div class="d-flex align-items-center">
-                            <div class="circle-icon-1 mr-4 d-flex align-items-center justify-content-center"><div class="icon"></div></div>
-                            <p class="hor-bar-label-1"></p>
+                <div class="charts-2 d-flex flex-column mx-0 mt-4 h-100">
+                    <div class="d-flex align-items-center justify-content-between charts-margin">
+                        <h2>Программа</h2>
+                        <div class="styled">
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <option>Июль 2019</option>
+                                <option>Август 2019</option>
+                                <option>Сентябрь 2019</option>
+                            </select>
                         </div>
-                        <p class="hor-bar-data-1"></p>
                     </div>
-                    <div class="d-flex align-items-center justify-content-between mb-3">
-                        <div class="d-flex align-items-center">
-                            <div class="circle-icon-2 mr-4 d-flex align-items-center justify-content-center"><div class="icon"></div></div>
-                            <p class="hor-bar-label-2"></p>
-                        </div>
-                        <p class="hor-bar-data-2"></p>
+                    <div class="cover-chart">
+                        <canvas id="myChart4" width="100%" height="250"></canvas>
                     </div>
-                    <div class="d-flex align-items-center justify-content-between mb-3">
-                        <div class="d-flex align-items-center">
-                            <div class="circle-icon-3 mr-4 d-flex align-items-center justify-content-center"><div class="icon"></div></div>
-                            <p class="hor-bar-label-3"></p>
+                    <div class="d-flex flex-column mt-4">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex align-items-center">
+                                <div class="circle-icon-1 mr-4 d-flex align-items-center justify-content-center"><div class="icon"></div></div>
+                                <p class="hor-bar-label-1"></p>
+                            </div>
+                            <p class="hor-bar-data-1"></p>
                         </div>
-                        <p class="hor-bar-data-3"></p>
-                    </div>
-                    <div class="d-flex align-items-center justify-content-between">
-                        <div class="d-flex align-items-center">
-                            <div class="circle-icon-4 mr-4 d-flex align-items-center justify-content-center"><div class="icon"></div></div>
-                            <p class="hor-bar-label-4"></p>
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex align-items-center">
+                                <div class="circle-icon-2 mr-4 d-flex align-items-center justify-content-center"><div class="icon"></div></div>
+                                <p class="hor-bar-label-2"></p>
+                            </div>
+                            <p class="hor-bar-data-2"></p>
                         </div>
-                        <p class="hor-bar-data-4"></p>
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex align-items-center">
+                                <div class="circle-icon-3 mr-4 d-flex align-items-center justify-content-center"><div class="icon"></div></div>
+                                <p class="hor-bar-label-3"></p>
+                            </div>
+                            <p class="hor-bar-data-3"></p>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <div class="circle-icon-4 mr-4 d-flex align-items-center justify-content-center"><div class="icon"></div></div>
+                                <p class="hor-bar-label-4"></p>
+                            </div>
+                            <p class="hor-bar-data-4"></p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-4">
-            <div class="charts-2 d-flex flex-column h-100">
-                <div class="d-flex align-items-center justify-content-between charts-margin">
-                    <h2>Общий анализ</h2>
-                    <div class="styled">
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option>Июль 2019</option>
-                            <option>Август 2019</option>
-                            <option>Сентябрь 2019</option>
-                        </select>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 mx-0 mt-4 h-100">
+                <div class="charts d-flex">
+                    <div class="chart-container">
+                        <canvas id="myChart2"></canvas>
+                        <img class="image-inside" src="public/images/tick.png" alt="">
+                    </div>
+                    <div class="text-inside d-flex flex-column justify-content-between py-3">
+                        <p class="second-text"></p>
+                        <p class="sub-text">Пройдено</p>
                     </div>
                 </div>
-                <div class="cover-chart pt-2">
-                    <canvas id="myChart5" width="100%" height="70%"></canvas>
-                </div>
-                <div class="d-flex flex-column mt-4">
-                    <div class="d-flex align-items-center justify-content-between mb-3">
-                        <div class="d-flex align-items-center">
-                            <div class="circle-icon-2 mr-4 d-flex align-items-center justify-content-center"><div class="icon"></div></div>
-                            <p class="polar-area-label-1"></p>
+                <div class="charts-2 d-flex flex-column mx-0 mt-4 h-100">
+                    <div class="d-flex align-items-center justify-content-between charts-margin">
+                        <h2>Общий анализ</h2>
+                        <div class="styled">
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <option>Июль 2019</option>
+                                <option>Август 2019</option>
+                                <option>Сентябрь 2019</option>
+                            </select>
                         </div>
-                        <p class="first-text font-weight-bold"></p>
                     </div>
-                    <div class="d-flex align-items-center justify-content-between mb-3">
-                        <div class="d-flex align-items-center">
-                            <div class="circle-icon-5 mr-4 d-flex align-items-center justify-content-center"><div class="icon"></div></div>
-                            <p class="polar-area-label-2"></p>
-                        </div>
-                        <p class="second-text font-weight-bold"></p>
+                    <div class="cover-chart pt-2">
+                        <canvas id="myChart5" width="100%" height="70%"></canvas>
                     </div>
-                    <div class="d-flex align-items-center justify-content-between mb-3">
-                        <div class="d-flex align-items-center">
-                            <div class="circle-icon-4 mr-4 d-flex align-items-center justify-content-center"><div class="icon"></div></div>
-                            <p class="polar-area-label-3"></p>
+                    <div class="d-flex flex-column mt-4">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex align-items-center">
+                                <div class="circle-icon-2 mr-4 d-flex align-items-center justify-content-center"><div class="icon"></div></div>
+                                <p class="polar-area-label-1"></p>
+                            </div>
+                            <p class="first-text font-weight-bold"></p>
                         </div>
-                        <p class="font-weight-bold">4.5 / 5</p>
-                    </div>
-                    <div class="d-flex align-items-center justify-content-between">
-                        <div class="d-flex align-items-center">
-                            <div class="circle-icon-1 mr-4 d-flex align-items-center justify-content-center"><div class="icon"></div></div>
-                            <p class="polar-area-label-4"></p>
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex align-items-center">
+                                <div class="circle-icon-5 mr-4 d-flex align-items-center justify-content-center"><div class="icon"></div></div>
+                                <p class="polar-area-label-2"></p>
+                            </div>
+                            <p class="second-text font-weight-bold"></p>
                         </div>
-                        <p class="font-weight-bold">112</p>
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex align-items-center">
+                                <div class="circle-icon-4 mr-4 d-flex align-items-center justify-content-center"><div class="icon"></div></div>
+                                <p class="polar-area-label-3"></p>
+                            </div>
+                            <p class="font-weight-bold">4.5 / 5</p>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <div class="circle-icon-1 mr-4 d-flex align-items-center justify-content-center"><div class="icon"></div></div>
+                                <p class="polar-area-label-4"></p>
+                            </div>
+                            <p class="font-weight-bold">112</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-4">
-            <div class="charts-3 d-flex flex-column h-100">
-                <div class="d-flex align-items-center justify-content-between charts-margin">
-                    <h2>Рейтинг</h2>
-                    <div class="styled">
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option>Июль 2019</option>
-                            <option>Август 2019</option>
-                            <option>Сентябрь 2019</option>
-                        </select>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 mx-0 mt-4 h-100">
+                <div class="charts d-flex">
+                    <div class="chart-container">
+                        <canvas id="myChart3"></canvas>
+                        <img class="image-inside" src="public/images/stats-blue.png" alt="">
+                    </div>
+                    <div class="text-inside d-flex flex-column justify-content-between py-3">
+                        <p class="third-text"></p>
+                        <p class="sub-text">В общем рейтинге</p>
                     </div>
                 </div>
-                <div class="cover-progress d-flex flex-column">
-                    <div class="d-flex align-items-center justify-content-between">
-                        <div class="d-flex align-items-center">
-                            <img src="public/images/avatar-1.png" alt="">
-                            <div class="d-flex flex-column">
-                                <h4>Зангар Орынбетов</h4>
-                                <p>IOS developer</p>
+                <div class="charts-3 d-flex flex-column mx-0 mt-4 h-100">
+                    <div class="d-flex align-items-center justify-content-between charts-margin">
+                        <h2>Рейтинг</h2>
+                        <div class="styled">
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <option>Июль 2019</option>
+                                <option>Август 2019</option>
+                                <option>Сентябрь 2019</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="cover-progress d-flex flex-column">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <img src="public/images/avatar-1.png" alt="">
+                                <div class="d-flex flex-column">
+                                    <h4>Зангар Орынбетов</h4>
+                                    <p>IOS developer</p>
+                                </div>
+                            </div>
+                            <h5>627 /1000</h5>
+                        </div>
+                        <div class="progress align-items-center mt-2">
+                            <div class="progress-bar bg-greenblue" role="progressbar" aria-valuenow="62.7"
+                                aria-valuemin="0" aria-valuemax="100" style="width:62.7%">
+                                <span class="sr-only">70% Complete</span>
                             </div>
                         </div>
-                        <h5>627 /1000</h5>
                     </div>
-                    <div class="progress align-items-center mt-2">
-                        <div class="progress-bar bg-greenblue" role="progressbar" aria-valuenow="62.7"
-                             aria-valuemin="0" aria-valuemax="100" style="width:62.7%">
-                            <span class="sr-only">70% Complete</span>
+                    <div class="cover-progress d-flex flex-column">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <img src="public/images/avatar-2.png" alt="">
+                                <div class="d-flex flex-column">
+                                    <h4>Айым Мухаметкали</h4>
+                                    <p>Web designer</p>
+                                </div>
+                            </div>
+                            <h5>596 /1000</h5>
                         </div>
-                    </div>
-                </div>
-                <div class="cover-progress d-flex flex-column">
-                    <div class="d-flex align-items-center justify-content-between">
-                        <div class="d-flex align-items-center">
-                            <img src="public/images/avatar-2.png" alt="">
-                            <div class="d-flex flex-column">
-                                <h4>Айым Мухаметкали</h4>
-                                <p>Web designer</p>
+                        <div class="progress align-items-center mt-2">
+                            <div class="progress-bar bg-lighter-purple" role="progressbar" aria-valuenow="59.6"
+                                aria-valuemin="0" aria-valuemax="100" style="width:59.6%">
+                                <span class="sr-only">70% Complete</span>
                             </div>
                         </div>
-                        <h5>596 /1000</h5>
                     </div>
-                    <div class="progress align-items-center mt-2">
-                        <div class="progress-bar bg-lighter-purple" role="progressbar" aria-valuenow="59.6"
-                             aria-valuemin="0" aria-valuemax="100" style="width:59.6%">
-                            <span class="sr-only">70% Complete</span>
+                    <div class="cover-progress d-flex flex-column">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <img src="public/images/avatar-3.png" alt="">
+                                <div class="d-flex flex-column">
+                                    <h4>Ару Жынгылбай</h4>
+                                    <p>Web designer</p>
+                                </div>
+                            </div>
+                            <h5>410 /1000</h5>
                         </div>
-                    </div>
-                </div>
-                <div class="cover-progress d-flex flex-column">
-                    <div class="d-flex align-items-center justify-content-between">
-                        <div class="d-flex align-items-center">
-                            <img src="public/images/avatar-3.png" alt="">
-                            <div class="d-flex flex-column">
-                                <h4>Ару Жынгылбай</h4>
-                                <p>Web designer</p>
+                        <div class="progress align-items-center mt-2">
+                            <div class="progress-bar bg-marigold" role="progressbar" aria-valuenow="41"
+                                aria-valuemin="0" aria-valuemax="100" style="width:41%">
+                                <span class="sr-only">70% Complete</span>
                             </div>
                         </div>
-                        <h5>410 /1000</h5>
                     </div>
-                    <div class="progress align-items-center mt-2">
-                        <div class="progress-bar bg-marigold" role="progressbar" aria-valuenow="41"
-                             aria-valuemin="0" aria-valuemax="100" style="width:41%">
-                            <span class="sr-only">70% Complete</span>
+                    <div class="cover-progress d-flex flex-column">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <img src="public/images/avatar-4.png" alt="">
+                                <div class="d-flex flex-column">
+                                    <h4>Нуржан Орманали</h4>
+                                    <p>IOS developer</p>
+                                </div>
+                            </div>
+                            <h5>376 /1000</h5>
                         </div>
-                    </div>
-                </div>
-                <div class="cover-progress d-flex flex-column">
-                    <div class="d-flex align-items-center justify-content-between">
-                        <div class="d-flex align-items-center">
-                            <img src="public/images/avatar-4.png" alt="">
-                            <div class="d-flex flex-column">
-                                <h4>Нуржан Орманали</h4>
-                                <p>IOS developer</p>
+                        <div class="progress align-items-center mt-2">
+                            <div class="progress-bar bg-dark-sky-blue" role="progressbar" aria-valuenow="37.6"
+                                aria-valuemin="0" aria-valuemax="100" style="width:37.6%">
+                                <span class="sr-only">70% Complete</span>
                             </div>
                         </div>
-                        <h5>376 /1000</h5>
                     </div>
-                    <div class="progress align-items-center mt-2">
-                        <div class="progress-bar bg-dark-sky-blue" role="progressbar" aria-valuenow="37.6"
-                             aria-valuemin="0" aria-valuemax="100" style="width:37.6%">
-                            <span class="sr-only">70% Complete</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="cover-progress d-flex flex-column">
-                    <div class="d-flex align-items-center justify-content-between">
-                        <div class="d-flex align-items-center">
-                            <img src="public/images/avatar-5.png" alt="">
-                            <div class="d-flex flex-column">
-                                <h4>Али Асылов</h4>
-                                <p>Graph designer</p>
+                    <div class="cover-progress d-flex flex-column">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <img src="public/images/avatar-5.png" alt="">
+                                <div class="d-flex flex-column">
+                                    <h4>Али Асылов</h4>
+                                    <p>Graph designer</p>
+                                </div>
                             </div>
+                            <h5>315 /1000</h5>
                         </div>
-                        <h5>315 /1000</h5>
-                    </div>
-                    <div class="progress align-items-center mt-2">
-                        <div class="progress-bar bg-watermelon" role="progressbar" aria-valuenow="31.5"
-                             aria-valuemin="0" aria-valuemax="100" style="width:31.5%">
-                            <span class="sr-only">70% Complete</span>
+                        <div class="progress align-items-center mt-2">
+                            <div class="progress-bar bg-watermelon" role="progressbar" aria-valuenow="31.5"
+                                aria-valuemin="0" aria-valuemax="100" style="width:31.5%">
+                                <span class="sr-only">70% Complete</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -303,6 +306,16 @@
 
 <script>
     $(document).ready(function () {
+        $('.mobile-menu-btn').click(function(e) {
+            e.stopPropagation();
+            $('.left-menu').toggleClass('show-menu')
+        });
+        $('body').click(function(e) {
+            if ($('.left-menu').hasClass('show-menu')) {
+                $('.left-menu').toggleClass('show-menu')
+            }
+        });
+
         var number = 596;
         var number2 = 59.6;
         var number3 = 10;
@@ -575,7 +588,6 @@
         $(".polar-area-label-2").text(myChart5.data.labels[1]);
         $(".polar-area-label-3").text(myChart5.data.labels[2]);
         $(".polar-area-label-4").text(myChart5.data.labels[3]);
-
     });
 </script>
 </body>
