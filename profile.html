@@ -26,16 +26,33 @@
 
 <div class="my-profle">
     <div class="upper-head d-flex align-items-center justify-content-between">
-        <h1>Профиль</h1>
-        <div class="d-flex align-items-center">
+        <nav class="navbar navbar-light mobile-menu">
+            <button class="navbar-toggler mobile-menu-btn" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon mobile-menu-icon"></span>
+            </button>
+        </nav>
+        <h1 class="head-title">
+            <a href="index.html" class="mobile-logo logo mx-2"><img src="public/images/logo.png" alt=""></a>
+            Профиль
+        </h1>
+        <div class="d-flex align-items-center mx-3">
             <div class="timer d-flex align-items-center">
                 <img class="mr-2" src="public/images/timer.png" alt="">
                 <p>20 дней 16:20:59</p>
             </div>
-            <a class="bell mx-4" href="">
-                <img class="bell-icon" src="public/images/bell.png" alt="">
-                <img class="status-icon" src="public/images/status.png" alt="">
-            </a>
+            <div class="dropdown">
+                <a class="bell mx-4" id="dropdownNotification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img class="bell-icon" src="public/images/bell.png" alt="">
+                    <img class="status-icon" src="public/images/status.png" alt="">
+                </a>
+                <div class="dropdown-menu dropdown-menu-right mt-4" aria-labelledby="dropdownNotification">
+                    <h2 class="mb-3">Уведомление</h2>
+                    <a class="dropdown-item d-flex align-items-center mb-3 mx-3">
+                        <img class="svg-icon mr-1" src="public/images/bell.png" alt="">
+                        <p>У вас пока нет уведомление</p>
+                    </a>
+                </div>
+            </div>
             <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <img src="public/images/avatar.png" alt="">
@@ -57,13 +74,13 @@
     </div>
 
     <div class="row mx-0">
-        <div class="col-4">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 mx-0 mt-4">
             <div class="profile-information d-flex flex-column">
                 <div class="photo-and-info padding-x d-flex align-items-center">
                     <img src="public/images/avatar.png" alt="">
                     <div class="d-flex flex-column">
                         <h2>МҰХАМЕТҚАЛИ АЙЫМ ОЗАТҚЫЗЫ</h2>
-                        <p>Web designer</p>
+                        <p class="mt-2">Web designer</p>
                     </div>
                 </div>
                 <div class="info-box d-flex justify-content-between align-items-center border-top">
@@ -200,14 +217,16 @@
             </div>
         </div>
 
-        <div class="col-4">
-            <div class="stars-rating d-flex justify-content-between align-items-center">
-                <div class="d-flex flex-column">
-                    <h2>4.5 /5</h2>
-                    <p>Общий рейтинг</p>
-                </div>
-                <div class="star-rating harambe">
-                    <span style="width: 90%"></span>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 mx-0 mt-4">
+            <div class="stars-rating d-flex flex-column">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex flex-column">
+                        <h2>4.5 /5</h2>
+                        <p>Общий рейтинг</p>
+                    </div>
+                    <div class="star-rating harambe img-fluid">
+                        <span style="width: 90%"></span>
+                    </div>
                 </div>
             </div>
 
@@ -217,22 +236,22 @@
                 <div class="d-flex flex-column px-4">
                     <div class="d-flex align-items-center justify-content-between mb-3">
                         <div class="d-flex align-items-center">
-                            <div class="circle-icon-1 mr-4 d-flex align-items-center justify-content-center"><div class="icon"></div></div>
-                            <p class="text-1">Ответственность</p>
+                            <div class="circle-icon-1 mr-3 d-flex align-items-center justify-content-center"><div class="icon"></div></div>
+                            <p class="text-1 mr-1">Ответственность</p>
                         </div>
                         <p class="percentage">81.57%</p>
                     </div>
                     <div class="d-flex align-items-center justify-content-between mb-3">
                         <div class="d-flex align-items-center">
-                            <div class="circle-icon-2 mr-4 d-flex align-items-center justify-content-center"><div class="icon"></div></div>
-                            <p class="text-1">Коммуникабельность</p>
+                            <div class="circle-icon-2 mr-3 d-flex align-items-center justify-content-center"><div class="icon"></div></div>
+                            <p class="text-1 mr-1">Коммуникабельность</p>
                         </div>
                         <p class="percentage">63.25%</p>
                     </div>
                     <div class="d-flex align-items-center justify-content-between mb-3">
                         <div class="d-flex align-items-center">
-                            <div class="circle-icon-3 mr-4 d-flex align-items-center justify-content-center"><div class="icon"></div></div>
-                            <p class="text-1">Работа в команде</p>
+                            <div class="circle-icon-3 mr-3 d-flex align-items-center justify-content-center"><div class="icon"></div></div>
+                            <p class="text-1 mr-1">Работа в команде</p>
                         </div>
                         <p class="percentage">52.95%</p>
                     </div>
@@ -291,15 +310,18 @@
                 </div>
             </div>
         </div>
-        <div class="col-4">
+
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 mx-0 mt-4">
             <div class="experience d-flex flex-column">
                 <h2>Опыт работы</h2>
                 <div class="d-flex justify-content-between pb-3">
-                    <div class="d-flex flex-column align-items-center h-auto justify-content-between">
+                    <div class="d-flex flex-column align-items-center h-auto justify-content-between mr-3">
                         <h3>2</h3>
                         <p>Стаж(года)</p>
                     </div>
-                    <img src="public/images/graph.png" alt="">
+                    <div class="">
+                        <img class="img-fluid" src="public/images/graph.png" alt="">
+                    </div>
                 </div>
             </div>
 
@@ -409,7 +431,6 @@
             </div>
         </div>
     </div>
-
 </div>
 
 <script language="JavaScript" type="text/javascript" src="public/libs/jquery/dist/jquery.min.js"></script>
@@ -419,7 +440,15 @@
 
 <script>
     $(document).ready(function () {
-
+        $('.mobile-menu-btn').click(function(e) {
+            e.stopPropagation();
+            $('.left-menu').toggleClass('show-menu')
+        });
+        $('body').click(function(e) {
+            if ($('.left-menu').hasClass('show-menu')) {
+                $('.left-menu').toggleClass('show-menu')
+            }
+        });
     });
 </script>
 </body>

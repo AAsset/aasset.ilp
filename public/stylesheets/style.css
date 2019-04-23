@@ -6960,7 +6960,7 @@ button.bg-dark:focus {
 }
 
 .border-top {
-    border-top: 1px solid #dee2e6 !important
+    border-top: 1px solid #ebedf4 !important
 }
 
 .border-right {
@@ -11832,6 +11832,10 @@ h1 {
     background-color: #fff
 }
 
+.my-profle .personal-qualities .text-1 {
+    font-size: .8rem;
+}
+
 .my-profle .personal-qualities .percentage {
     font-weight: bold;
     color: #31394d
@@ -12368,7 +12372,8 @@ h1 {
     .inside-object,
     .programms,
     .content,
-    .tests {
+    .tests,
+    .my-profle {
         width: calc(100vw);
     }
 
