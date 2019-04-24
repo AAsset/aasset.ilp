@@ -1407,16 +1407,20 @@ h1 {
   padding: rem(30);
   position: relative;
   .main-icon {
-    //position: absolute;
     top: rem(30);
-    //left: 0;
-    //right: 0;
-    //margin-left: auto;
-    //margin-right: auto;
     width: rem(132);
     height: auto;
   }
-
+  .top-center-image {
+    position: absolute;
+    top: 1.875rem;
+    width: 8.25rem;
+    height: auto
+  }
+  .registration-block {
+    background: white;
+    padding: 1.9rem 2.75rem;;
+  }
   h1 {
     color: $dark;
     font-size: rem(30);
@@ -1483,12 +1487,13 @@ h1 {
     overflow: unset;
     border-radius: 7px;
     background: $pale-grey-two;
-    height: 3px;
+    height: 6px;
     margin-top: rem(30);
     .progress-bar {
-      height: 5px;
+      height: 6px;
       box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
       border-radius: 7px;
+      background: #29cb97;
     }
   }
   button.submit {

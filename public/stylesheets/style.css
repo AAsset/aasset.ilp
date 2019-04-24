@@ -12186,6 +12186,18 @@ h1 {
     height: auto
 }
 
+.registration .top-center-image {
+    position: absolute;
+    top: 1.875rem;
+    width: 8.25rem;
+    height: auto
+}
+
+.registration .registration-block {
+    background: white;
+    padding: 1.9rem 2.75rem;;
+}
+
 .registration h1 {
     color: #31394d;
     font-size: 1.875rem;
@@ -12259,15 +12271,16 @@ h1 {
     overflow: unset;
     border-radius: 7px;
     background: #e5e9f2;
-    height: 3px;
+    height: 6px;
     margin-top: 1.875rem
 }
 
 .registration .progress .progress-bar {
-    height: 5px;
+    height: 6px;
     -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
-    border-radius: 7px
+    border-radius: 7px;
+    background: #29cb97;
 }
 
 .registration button.submit {
