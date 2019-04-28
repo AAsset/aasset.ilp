@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=7; IE=Edge">
+    <title>
+        ILT
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel='stylesheet' href='public/stylesheets/normalize.css'/>
+    <link rel='stylesheet' href='public/stylesheets/style.css'/>
+
+</head>
+<body class="d-flex">
+
+<div class="left-menu d-flex flex-column align-items-center justify-content-between">
+    <a href="index.html" class="logo"><img src="public/images/logo.png" alt=""></a>
+    <ul class="d-flex flex-column w-100">
+        <li><a href="index.html"><img src="public/images/stats-inactive.png" alt=""></a></li>
+        <li><a href="programms.html"><img src="public/images/maps-inactive.png" alt=""></a></li>
+        <li class="active"><a href="tests.html"><img src="public/images/files.png" alt=""></a></li>
+        <li><a href=""><img src="public/images/settings-inactive.png" alt=""></a></li>
+    </ul>
+    <a href="" class="faq"><img src="public/images/question.png" alt=""></a>
+</div>
+
+<div class="test">
+
+<div class="upper-head d-flex align-items-center justify-content-between">
+    <h1>Тесты</h1>
+    <div class="d-flex align-items-center">
+        <div class="timer d-flex align-items-center">
+            <img class="mr-2" src="public/images/timer.png" alt="">
+            <p>20 дней 16:20:59</p>
+        </div>
+        <div class="dropdown">
+            <a class="bell mx-4" id="dropdownNotification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img class="bell-icon" src="public/images/bell.png" alt="">
+                <img class="status-icon" src="public/images/status.png" alt="">
+            </a>
+            <div class="dropdown-menu dropdown-menu-right mt-4" aria-labelledby="dropdownNotification">
+                <h2 class="mb-3">Уведомление</h2>
+                <a class="dropdown-item d-flex align-items-center mb-3 mx-3">
+                    <img class="svg-icon mr-1" src="public/images/bell.png" alt="">
+                    <p>У вас пока нет уведомление</p>
+                </a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="public/images/avatar.png" alt="">
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                <div class="d-flex align-items-center mb-2">
+                    <img class="avatar-image" src="public/images/avatar.png" alt="">
+                    <div class="d-flex flex-column">
+                        <h2>Айым Мухаметкали</h2>
+                        <p>Web designer</p>
+                    </div>
+                </div>
+                <a class="dropdown-item d-flex align-items-center" href="profile.html"><img class="svg-icon" src="public/images/my-profile.svg" alt=""> Мой профиль</a>
+                <a class="dropdown-item d-flex align-items-center" href="#"><img class="svg-icon" src="public/images/settings.svg" alt=""> Настройки</a>
+                <a class="dropdown-item border-top d-flex align-items-center" href="authorization.html"><img class="svg-icon" src="public/images/sign-out.svg" alt=""> Выйти из аккаунта</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid d-flex justify-content-center align-items-center">
+    <div class="row">
+        <div class="col-7 m-auto">
+            <div class="d-flex flex-column align-items-center text-center mb-30">
+                <h1 class="mb-30">Отлично! Вы ответили на все вопросы и получили +5 баллов!</h1>
+                <h5 class="mb-30">После того, как модератор проверяет ваши ответы, вы можете посмотреть полученные вами баллы.</h5>
+                <a href="/" class="main-link py-3">На главную</a>
+            </div>
+        </div>
+    </div>
+    <p class="copyright">2019 ILovePeople. Все права защищены.</p>
+</div>
+
+</div>
+
+<script language="JavaScript" type="text/javascript" src="public/libs/jquery/dist/jquery.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="public/libs/popper.js/dist/umd/popper.js"></script>
+<script language="JavaScript" type="text/javascript" src="public/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('img[src$=".svg"]').each(function() {
+            var $img = jQuery(this);
+            var imgURL = $img.attr('src');
+            var attributes = $img.prop("attributes");
+
+            $.get(imgURL, function(data) {
+                // Get the SVG tag, ignore the rest
+                var $svg = jQuery(data).find('svg');
+
+                // Remove any invalid XML tags
+                $svg = $svg.removeAttr('xmlns:a');
+
+                // Loop through IMG attributes and apply on SVG
+                $.each(attributes, function() {
+                    $svg.attr(this.name, this.value);
+                });
+
+                // Replace IMG with SVG
+                $img.replaceWith($svg);
+            }, 'xml');
+        });
+    });
+</script>
+</body>
+</html>
