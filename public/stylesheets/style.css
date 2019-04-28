@@ -12256,7 +12256,7 @@ h1 {
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.07);
     background: #fff;
     border-radius: 7px;
-    padding: 1rem
+    padding: .45rem
 }
 
 .registration .input-field input {
@@ -12362,6 +12362,122 @@ h1 {
     margin-top: .625rem
 }
 
+.test {
+    width: calc(100vw - 5rem);
+    padding: 1.9rem calc(1.8rem);
+    max-height: 100vh;
+    overflow-y: auto
+}
+
+.test .upper-head {
+    margin-left: 0;
+    margin-right: 0
+}
+
+.test .question-block {
+    background: white;
+    padding: 1.9rem 2.75rem;;
+}
+
+.test .answer {
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.07);
+    border: none;
+}
+
+.test h1, .test h1 span {
+    color: #31394d;
+    font-size: 1.875rem;
+}
+
+.test h2 {
+    color: #31394d;
+    font-size: 1.125rem;
+    margin-bottom: 2.5rem
+}
+
+.test h4 {
+    color: #29cb97;
+    font-size: 1.1rem;
+}
+
+.test .mb-30 {
+    margin-bottom: 1.875rem
+}
+
+.test h5 {
+    color: #748aa1;
+    font-size: 1rem
+}
+
+.test p {
+    color: #748aa1;
+    font-size: .875rem
+}
+
+.test .skip, .test .exit, .test .finish {
+    font-size: 1rem;
+    color: #748aa1;
+    text-decoration: underline
+}
+
+.test .input-field {
+    -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.07);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.07);
+    background: #fff;
+    border-radius: 7px;
+    padding: .45rem
+}
+
+.test .input-field input, .test .input-field textarea {
+    border: none;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    width: 100%;
+}
+
+.test .progress {
+    overflow: unset;
+    border-radius: 7px;
+    background: #e5e9f2;
+    height: 6px;
+    margin-top: 1.875rem
+}
+
+.test .progress .progress-bar {
+    height: 6px;
+    -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 7px;
+    background: #29cb97;
+}
+
+.test button.submit {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin: 0;
+    padding: 0
+}
+
+.test .main-link {
+    background: #29cb97;
+    color: #ffffff;
+    width: 291px;
+    border-radius: 6px;
+}
+
+.test .custom-control-label::before {
+    background-color: #fff;
+    border: 1px solid #748aa1
+}
+
+.test .copyright {
+    color: #748aa1;
+    font-size: .75rem
+}
+
 @media (min-width: 577px) {
     .mobile-menu {
         display: none !important;
@@ -12381,11 +12497,11 @@ h1 {
 }
 
 @media (max-width: 576px) {
-
     .inside-object,
     .programms,
     .content,
     .tests,
+    .test,
     .my-profle {
         width: calc(100vw);
     }
@@ -12471,6 +12587,38 @@ h1 {
 .head-title {
     display: inline-flex;
     align-items: center;
+}
+
+.w-10 {
+    width: 10%;
+}
+
+.w-20 {
+    width: 20%;
+}
+
+.w-30 {
+    width: 30%;
+}
+
+.w-40 {
+    width: 40%;
+}
+
+.w-60 {
+    width: 60%;
+}
+
+.w-70 {
+    width: 70%;
+}
+
+.w-80 {
+    width: 80%;
+}
+
+.w-90 {
+    width: 90%;
 }
 
 /*# sourceMappingURL=style.css.map */
