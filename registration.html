@@ -24,19 +24,37 @@
             <h1 class="mb-30">Привет!</h1>
             <div class="registration-block d-flex flex-column w-100 h-auto">
                 <h2 class="mb-30">Давайте познакомимся по ближе. Ответьте на следующие вопросы.</h2>
-                <form id="registration-form-2" method="post" class="flex-column">
+                <form class="registration-form" method="post" class="flex-column">
+                    <div class="d-flex justify-content-between mb-2">
+                        <h5>Как вас зовут?</h5>
+                        <p><span class="step"></span> / <span class="max"></span></p>
+                    </div>
+                    <div class="d-flex input-field mb-4">
+                        <input type="text" class="form-control" required>
+                        <div class="input-group-append">
+                            <button class="submit btn-outline-secondary">
+                                <img src="./public/images/next-arrow.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="progress mb-30">
+                        <div class="progress-bar w-25"></div>
+                    </div>
+                </form>
+
+                <form class="registration-form" method="post" class="flex-column">
                     <div class="d-flex justify-content-between mb-30">
                         <h5>Выберите пол</h5>
-                        <p>2/4</p>
+                        <p><span class="step"></span> / <span class="max"></span></p>
                     </div>
                     <div class="d-flex justify-content-between">
                         <div class="d-flex">
                             <div class="custom-control custom-control-inline mr-4 custom-radio">
-                                <input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked" required>
+                                <input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked">
                                 <label class="custom-control-label" for="customControlValidation2">Мужчина</label>
                             </div>
                             <div class="custom-control custom-control-inline custom-radio">
-                                <input type="radio" class="custom-control-input" id="customControlValidation3" name="radio-stacked" required>
+                                <input type="radio" class="custom-control-input" id="customControlValidation3" name="radio-stacked" checked>
                                 <label class="custom-control-label" for="customControlValidation3">Женщина</label>
                             </div>
                         </div>
@@ -48,9 +66,45 @@
                         <div class="progress-bar w-50"></div>
                     </div>
                 </form>
+
+                <form class="registration-form" method="post" class="flex-column">
+                    <div class="d-flex justify-content-between mb-2">
+                        <h5>Сколько вам лет?</h5>
+                        <p><span class="step"></span> / <span class="max"></span></p>
+                    </div>
+                    <div class="d-flex input-field mb-4">
+                        <input type="number" class="form-control" required>
+                        <div class="input-group-append">
+                            <button class="submit btn-outline-secondary">
+                                <img src="./public/images/next-arrow.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="progress mb-30">
+                        <div class="progress-bar w-75"></div>
+                    </div>
+                </form>
+
+                <form class="registration-form" method="post" class="flex-column">
+                    <div class="d-flex justify-content-between mb-2">
+                        <h5>С какого вы города?</h5>
+                        <p><span class="step"></span> / <span class="max"></span></p>
+                    </div>
+                    <div class="d-flex input-field mb-4">
+                        <input type="text" class="form-control" required>
+                        <div class="input-group-append">
+                            <button class="submit btn-outline-secondary">
+                                <img src="./public/images/next-arrow.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="progress mb-30">
+                        <div class="progress-bar w-100"></div>
+                    </div>
+                </form>
                 <div class="d-flex justify-content-between">
                     <a href="./authorization.html" class="skip"> Выйти </a>
-                    <a href="./authorization.html" class="skip"> Пропустить </a>
+                    <a href="#" class="skip"> Пропустить </a>
                 </div>
             </div>
         </div>
@@ -63,5 +117,70 @@
 <script language="JavaScript" type="text/javascript" src="public/libs/popper.js/dist/umd/popper.js"></script>
 <script language="JavaScript" type="text/javascript" src="public/libs/bootstrap/dist/js/bootstrap.min.js"></script>
 
+<script>
+    $(document).ready(function () {
+        var step = 1;
+        var forms = [];
+        $('.registration-form').each(function() {
+            forms.push(this);
+        });
+
+        var max = forms.length;
+        $('.max').html(`${max}`);
+
+        showForms();
+        updateContent(step);
+        updateProgressBar(step);
+
+        $('.skip').on('click', function() {
+            checkStep();
+            showForms();
+            updateContent(step);
+            updateProgressBar(step);
+        });
+
+        $('.registration-form').submit(function( event ) {
+            checkStep();
+            showForms();
+            updateContent(step);
+            updateProgressBar(step);
+            event.preventDefault();
+        });
+
+        function checkStep() {
+            if (step < max) {
+                step = ++step;
+                console.log(step);
+            } else if (step == max) {
+                window.location.replace('index.html');
+            }
+        }
+
+        function showForms() {
+            for (var i = 0; i < forms.length; i++) {
+                $(forms[step-1]).show();
+                if (i != step-1) {
+                    $(forms[i]).hide();
+                }
+            }
+        }
+
+        function updateContent(step) {
+            $('.step').map(function() {
+                return $(this).html(`${step}`);
+            })
+        }
+
+        function updateProgressBar(step) {
+            $('.progress-bar').map(function() {
+                if ($(this).hasClass(`w-${step-1*25}`)) {
+                    $(this).removeClass(`w-${step*25}`);
+                }
+                $(this).addClass(`w-${step*25}`);
+                return $(this);
+            }).get();
+        }
+    });
+</script>
 </body>
 </html>
