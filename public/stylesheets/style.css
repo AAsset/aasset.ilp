@@ -12389,7 +12389,8 @@ h1 {
 
 .test .question-block {
     background: white;
-    padding: 1.9rem 2.75rem;;
+    padding: 1.9rem 2.75rem;
+    margin-bottom: 8rem;
 }
 
 .test .answer {
