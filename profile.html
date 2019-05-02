@@ -13,6 +13,26 @@
 </head>
 <body class="d-flex">
 
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+        <div class="modal-header modal-top-head">
+            <button class="modal-title modal-close" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <img src="./public/images/close.png" alt="">
+            </button>
+        </div>
+        <div class="modal-body modal-body-content d-flex flex-column align-items-center text-center">
+            <img class="img-fluid my-4" src="./public/images/modal-pic.png" alt="">
+            <h4>Привет!</h4>
+            <p>Здесь тебя ждет незабываемая 2 месечная стражировка. Приступим?</p>
+            <div class="d-flex align-items-center justify-content-center">
+                <button type="button" id="startTourBtn" class="btn btn-start" data-dismiss="modal">Приступить</button>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+
 <div class="left-menu d-flex flex-column align-items-center justify-content-between">
     <a href="index.html" class="logo"><img src="public/images/logo.png" alt=""></a>
     <ul class="d-flex flex-column w-100">
@@ -437,7 +457,6 @@
 <script language="JavaScript" type="text/javascript" src="public/libs/popper.js/dist/umd/popper.js"></script>
 <script language="JavaScript" type="text/javascript" src="public/libs/bootstrap/dist/js/bootstrap.min.js"></script>
 
-
 <script>
     $(document).ready(function () {
         $('.mobile-menu-btn').click(function(e) {
@@ -449,6 +468,7 @@
                 $('.left-menu').toggleClass('show-menu')
             }
         });
+        $('#exampleModalCenter').modal();
     });
 </script>
 </body>

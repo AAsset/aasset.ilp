@@ -12672,4 +12672,31 @@ h1 {
     width: 90%;
 }
 
+.modal-top-head {
+    border: none;
+}
+.modal-close {
+    padding: 0;
+    border: none;
+    background: none;
+}
+.modal-body-content {
+    color: #31394d;
+    padding: 0 4rem;
+}
+.modal-body-content h4 {
+    font-size: 1.25rem;
+}
+.modal-body-content p {
+    font-size: 1.125rem;
+}
+.btn-start {
+    width: 285px;
+    height: 50px;
+    background-color: #29cb97;
+    margin-top: 3.125rem;
+    margin-bottom: 4rem;
+    color: #ffffff;
+}
+
 /*# sourceMappingURL=style.css.map */
