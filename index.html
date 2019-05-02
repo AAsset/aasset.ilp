@@ -16,12 +16,26 @@
 <div class="left-menu d-flex flex-column align-items-center justify-content-between">
     <a href="index.html" class="logo"><img src="public/images/logo.png" alt=""></a>
     <ul class="d-flex flex-column w-100">
-        <li class="active"><a href="index.html"><img src="public/images/stats.png" alt=""></a></li>
+        <li class="tour-step active" data-popover-content="#unique-id" data-toggle="popover" data-placement="right">
+            <a href="index.html"><img src="public/images/stats.png" alt=""></a>
+        </li>
         <li><a href="programms.html"><img src="public/images/maps-inactive.png" alt=""></a></li>
         <li><a href="tests.html"><img src="public/images/files-inactive.png" alt=""></a></li>
         <li><a href=""><img src="public/images/settings-inactive.png" alt=""></a></li>
     </ul>
     <a href="" class="faq"><img src="public/images/question.png" alt=""></a>
+</div>
+
+<div id="unique-id" style="display:none;">
+    <div class="popover-body">
+        <div class="d-flex flex-column popover-content">
+            <h4 class="mb-2">Главная страница</h4>
+            <p class="mb-3">Вы можете увидеть свои результаты тестов зайдя на главную страницу.</p>
+            <a href="#" class="continue d-flex flex-row align-items-center">
+                <span class="mr-1">Продолжить</span>
+                <img src="./public/images/arrow-right.png" width="10" height="10" alt=""></a>
+        </div>
+    </div>
 </div>
 
 <div class="content">
@@ -312,6 +326,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-style@latest/dist/chartjs-plugin-style.min.js"></script>
 <script src="public/chart-border-radius.min.js"></script>
+<script src="./public/tour.js"></script>
 
 <script>
     $(document).ready(function () {
@@ -597,6 +612,42 @@
         $(".polar-area-label-2").text(myChart5.data.labels[1]);
         $(".polar-area-label-3").text(myChart5.data.labels[2]);
         $(".polar-area-label-4").text(myChart5.data.labels[3]);
+    });
+</script>
+<script>
+    var zIndex = 999;
+    function start() {
+        addBackDrop();
+    }
+
+    function addBackDrop() {
+        var backdrop = document.createElement('div');
+            backdrop.className = 'tour-backdrop';
+            backdrop.style.zIndex = zIndex;
+        document.body.appendChild(backdrop);
+    }
+
+    function removeBackDrop() {
+        $('.tour-backdrop').remove();
+    }
+
+    start();
+
+    $('.tour-step').css('z-index', zIndex+1);
+    var dataTogglePopover = $('[data-toggle=popover]');
+    dataTogglePopover.popover({
+        html : true,
+        trigger: 'focus',
+        content: function() {
+            var content = $(this).attr('data-popover-content');
+            return $(content).children(".popover-body").html();
+        }
+    });
+    dataTogglePopover.popover('show');
+
+    $('.continue').on('click', function() {
+        removeBackDrop();
+        dataTogglePopover.popover('hide');
     });
 </script>
 </body>

@@ -12684,21 +12684,26 @@ h1 {
 .modal-top-head {
     border: none;
 }
+
 .modal-close {
     padding: 0;
     border: none;
     background: none;
 }
+
 .modal-body-content {
     color: #31394d;
     padding: 0 4rem;
 }
+
 .modal-body-content h4 {
     font-size: 1.25rem;
 }
+
 .modal-body-content p {
     font-size: 1.125rem;
 }
+
 .btn-start {
     width: 285px;
     height: 50px;
@@ -12706,6 +12711,47 @@ h1 {
     margin-top: 3.125rem;
     margin-bottom: 4rem;
     color: #ffffff;
+}
+
+.tour-backdrop {
+    background: rgba(0, 0, 0, 0.75);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+
+.popover {
+    border: none;
+}
+
+.bs-popover-right {
+    margin-left: 1.5rem;
+}
+
+.popover .arrow::after {
+    border-right-color: #f65860;
+}
+
+.popover-body {
+    padding: 1.25rem 1rem;
+    color: white;
+    background: #f65860;
+    border-radius: .3rem;
+}
+
+.popover-content h4 {
+    font-size: 1rem;
+}
+
+.popover-content p {
+    font-size: .75rem;
+}
+
+.popover-content a span {
+    font-size: .75rem;
+    text-decoration: underline;
+    color: white;
+    cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
