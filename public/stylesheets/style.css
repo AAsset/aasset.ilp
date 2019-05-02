@@ -11345,10 +11345,15 @@ h1 {
 }
 
 .inside-object .tasks .logo-file {
+    cursor: pointer;
     background: #29cb97;
     border-radius: 50%;
     height: 2.5rem;
     width: 2.5rem
+}
+
+.inside-object .tasks .logo-file img {
+    cursor: pointer;
 }
 
 .inside-object .tasks .logo-file svg {
@@ -11360,6 +11365,10 @@ h1 {
 
 .inside-object .tasks .attached-file {
     padding: 0rem 1.3rem
+}
+
+.inside-object .tasks .attached-file .file-upload-text h6 {
+    color: #4072ee;
 }
 
 .inside-object .tasks .attached-file h6 {
