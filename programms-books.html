@@ -93,8 +93,11 @@
         </div>
     </div>
     <div class="menu-header-usual">
-        <ul class="menu-header d-flex align-items-center">
-            <li class=""><a href="programms.html"><img src="public/images/video-inactive.png" alt="">Видеоуроки</a></li>
+        <ul class="menu-header d-flex align-items-center tour-step">
+            <li data-popover-content="#unique-id" data-toggle="popover" data-placement="bottom">
+                <a href="programms.html">
+                <img src="public/images/video-inactive.png" alt="">Видеоуроки</a>
+            </li>
             <li class="active"><a href="programms-books.html"><img src="public/images/book.svg" alt="">Книги</a></li>
             <li><a href="programms-films.html"><img src="public/images/movie.svg" alt="">Фильмы</a></li>
             <li><a href="programms-quests.html"><img src="public/images/quest.svg" alt="">Квесты</a></li>
@@ -236,12 +239,69 @@
     </div>
 </div>
 
+<div id="unique-id" style="display:none;">
+    <div class="popover-body">
+        <div class="d-flex flex-column popover-content">
+            <h4 class="mb-2">Программа</h4>
+            <p class="mb-3">Здесь находятся все задания за 2 месяца.</p>
+            <a href="#" class="continue d-flex flex-row align-items-center">
+                <span class="mr-1">Продолжить</span>
+                <img src="./public/images/arrow-right.png" width="10" height="10" alt=""></a>
+        </div>
+    </div>
+</div>
 
 <script language="JavaScript" type="text/javascript" src="public/libs/jquery/dist/jquery.min.js"></script>
 <script language="JavaScript" type="text/javascript" src="public/libs/popper.js/dist/umd/popper.js"></script>
 <script language="JavaScript" type="text/javascript" src="public/libs/bootstrap/dist/js/bootstrap.min.js"></script>
 
 
+<script>
+    (function () {
+        var zIndex = 999;
+        function start() {
+            addBackDrop();
+        }
+    
+        function addBackDrop() {
+            var backdrop = document.createElement('div');
+                backdrop.className = 'tour-backdrop';
+                backdrop.style.zIndex = zIndex;
+            document.body.appendChild(backdrop);
+        }
+    
+        function removeBackDrop() {
+            $('.tour-backdrop').remove();
+        }
+    
+        start();
+    
+        $('.tour-step').css({
+            'z-index': zIndex+1,
+            'position': 'relative'
+        });
+
+        var dataTogglePopover = $('[data-toggle=popover]');
+        dataTogglePopover.popover({
+            html : true,
+            trigger: 'focus',
+            content: function() {
+                var content = $(this).attr('data-popover-content');
+                return $(content).children(".popover-body").html();
+            }
+        });
+        dataTogglePopover.popover('show');
+    
+        $('.continue').on('click', function() {
+            removeBackDrop();
+            dataTogglePopover.popover('hide');
+            $('.tour-step').css({
+                'z-index': 1,
+                'position': 'inherit'
+            });
+        });
+    })();
+</script>
 <script>
     $(document).ready(function () {
         $('img[src$=".svg"]').each(function() {
