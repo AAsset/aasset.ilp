@@ -12728,7 +12728,11 @@ h1 {
     margin-left: 1.5rem;
 }
 
-.popover .arrow::after {
+.bs-popover-bottom .arrow::after, .bs-popover-auto[x-placement^="bottom"] .arrow::after {
+    border-bottom-color: #f65860;
+}
+
+.bs-popover-right .arrow::after, .bs-popover-auto[x-placement^="right"] .arrow::after {
     border-right-color: #f65860;
 }
 
