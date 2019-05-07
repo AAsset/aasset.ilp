@@ -11051,7 +11051,7 @@ h1 {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    padding-right: 1.5rem;
+    /* padding-right: 1.5rem; */
     color: #31394d;
     font-size: .9rem
 }
@@ -12149,7 +12149,7 @@ h1 {
     padding: 1rem
 }
 
-.authorization .auth-block form .password-input #pass_log_id {
+.authorization .auth-block form .password-input .pass_log_id {
     border: none;
     padding: 0;
     margin: 0;
@@ -12398,13 +12398,19 @@ h1 {
 
 .test .question-block {
     background: white;
-    padding: 1.9rem 2.75rem;
+    padding: 0 2.75rem 1.9rem 2.75rem;
     margin-bottom: 8rem;
 }
 
 .test .answer {
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.07);
     border: none;
+}
+
+.test .flex-width {
+    visibility: hidden;
+    margin: 0;
+    font-size: 1.125rem !important;
 }
 
 .test h1, .test h1 span {
@@ -12511,6 +12517,15 @@ h1 {
 
     .authorization .auth-block ul li.active {
         font-size: 1.875rem;
+    }
+
+    .test .flex-width {
+        font-size: 1.125rem;
+    }
+}
+@media (min-width: 577px) and (max-width: 992px) {
+    .test .flex-width {
+        font-size: .7rem !important;
     }
 }
 
@@ -12641,6 +12656,10 @@ h1 {
     .programms .menu-header .active {
         color: #4072ee;
         border-bottom: 0
+    }
+
+    .test .flex-width {
+        font-size: .7rem !important;
     }
 }
 
