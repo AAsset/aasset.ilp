@@ -25,14 +25,14 @@
                 <hr>
             </ul>
             <form id="auth-form"  method="post" class="flex-column">
-                <div class="form-group">
+                <div class="form-group mb-30">
                     <label for="email-input">E-mail</label>
                     <input type="email" class="form-control" required id="email-input" aria-describedby="emailHelp" placeholder="Введите ваш E-mail...">
                 </div>
                 <div class="form-group d-flex flex-column">
                     <label for="pass_log_id">Пароль</label>
                     <div class="password-input d-flex align-items-center">
-                        <input id="pass_log_id" type="password" required name="pass">
+                        <input class="pass_log_id" id="pass_log_id" type="password" required name="pass">
                         <span toggle="#password-field" class="fa fa-fw fa-eye field_icon toggle-password"></span>
                     </div>
                 </div>
@@ -46,15 +46,15 @@
                 <div class="form-group mb-30 d-flex flex-column">
                     <label for="pass_log_id">Пароль</label>
                     <div class="password-input d-flex align-items-center">
-                        <input id="pass_log_id" type="password" required name="pass">
-                        <span toggle="#password-field" class="fa fa-fw fa-eye field_icon toggle-password"></span>
+                        <input class="pass_log_id" id="pass_log_id_2" type="password" required name="pass">
+                        <span toggle="#password-field" class="fa fa-fw fa-eye field_icon toggle-password-2"></span>
                     </div>
                 </div>
                 <div class="form-group d-flex flex-column">
                     <label for="pass_log_id">Подтвердите пароль</label>
                     <div class="password-input d-flex align-items-center">
-                        <input id="pass_log_id" type="password" required name="pass">
-                        <span toggle="#password-field" class="fa fa-fw fa-eye field_icon toggle-password"></span>
+                        <input class="pass_log_id" id="pass_log_id_3" type="password" required name="pass">
+                        <span toggle="#password-field" class="fa fa-fw fa-eye field_icon toggle-password-3"></span>
                     </div>
                 </div>
                 <button type="submit">Далее</button>
@@ -120,6 +120,22 @@
         $(this).toggleClass("fa-eye fa-eye-slash");
 
         var input = $("#pass_log_id");
+        input.attr('type') === 'password' ? input.attr('type','text') : input.attr('type','password')
+    });
+
+    $(document).on('click', '.toggle-password-2', function() {
+
+        $(this).toggleClass("fa-eye fa-eye-slash");
+
+        var input = $("#pass_log_id_2");
+        input.attr('type') === 'password' ? input.attr('type','text') : input.attr('type','password')
+    });
+
+    $(document).on('click', '.toggle-password-3', function() {
+
+        $(this).toggleClass("fa-eye fa-eye-slash");
+
+        var input = $("#pass_log_id_3");
         input.attr('type') === 'password' ? input.attr('type','text') : input.attr('type','password')
     });
 </script>
