@@ -106,7 +106,7 @@
                             <select class="form-control" id="exampleFormControlSelect1">
                                 <option>Июль 2019</option>
                                 <option>Август 2019</option>
-                                <option>Сентябрь 2019</option>
+                                <!-- <option>Сентябрь 2019</option> -->
                             </select>
                         </div>
                     </div>
@@ -163,7 +163,7 @@
                             <select class="form-control" id="exampleFormControlSelect1">
                                 <option>Июль 2019</option>
                                 <option>Август 2019</option>
-                                <option>Сентябрь 2019</option>
+                                <!-- <option>Сентябрь 2019</option> -->
                             </select>
                         </div>
                     </div>
@@ -220,7 +220,7 @@
                             <select class="form-control" id="exampleFormControlSelect1">
                                 <option>Июль 2019</option>
                                 <option>Август 2019</option>
-                                <option>Сентябрь 2019</option>
+                                <!-- <option>Сентябрь 2019</option> -->
                             </select>
                         </div>
                     </div>
@@ -326,7 +326,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-style@latest/dist/chartjs-plugin-style.min.js"></script>
 <script src="public/chart-border-radius.min.js"></script>
-<script src="./public/tour.js"></script>
 
 <script>
     $(document).ready(function () {
@@ -445,16 +444,16 @@
         var data5 = {
             datasets: [{
                 data: [
-                    24,
-                    17,
                     23,
-                    32
+                    17,
+                    26,
+                    50,
                 ],
                 backgroundColor: [
-                    "#b558f6",
-                    "#f65860",
-                    "#fec400",
-                    "#29cb97"
+                    "#fec400", // yellow
+                    "#29cb97", // green
+                    "#f65860", // red
+                    "#b558f6", // violet
                 ],
                 label: 'Общий анализ' // for legend
             }],
@@ -577,24 +576,34 @@
         });
         var myChart5 = new Chart(document.getElementById('myChart5'), {
             data: data5,
-            type: 'polarArea',
+            type: 'pie',
             options: {
                 responsive: true,
-                scale: {
-                    display: false,
-                    ticks: {
-                        stepSize: 1
-                    }
-                },
-                scales: {
-                    xAxes: [{
-                        display:false
-                    }]
-                },
                 legend: {
                     display: false
-                }
+                },
+                tooltips: {
+					enabled: true,
+				}
             }
+            // polarArea options
+            // options: {
+            //     legend: {
+            //         display: false,
+            //         position:'bottom',
+            //     },
+                // scale: {
+                //     display: false,
+                //     ticks: {
+				// 		beginAtZero: true
+				// 	},
+				// 	reverse: true
+                // },
+				// animation: {
+				// 	animateRotate: false,
+				// 	animateScale: true
+				// },
+            // }
         })
 
         $(".first-text").text(myChart.data.datasets[0].data[0] + " / " + (myChart.data.datasets[0].data[0]+myChart.data.datasets[0].data[1]))
