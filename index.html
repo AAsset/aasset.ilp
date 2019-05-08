@@ -441,6 +441,22 @@
                 borderWidth: 0
             }]
         };
+
+        // Pie gradiend Background
+        var ctx = document.getElementById('myChart5').getContext("2d");
+        var yellow = ctx.createLinearGradient(0, 0, 0, 200);
+        yellow.addColorStop(0, '#ffe400');
+        yellow.addColorStop(1, '#fec400');
+        var green = ctx.createLinearGradient(0, 100, 0, 300);
+        green.addColorStop(0, '#53e7c8');
+        green.addColorStop(1, '#29cb97');
+        var red = ctx.createLinearGradient(0, 100, 0, 400);
+        red.addColorStop(0, '#fb9199');
+        red.addColorStop(1, '#f65860');
+        var purple = ctx.createLinearGradient(0, 0, 0, 400);
+        purple.addColorStop(0, '#db91fb');
+        purple.addColorStop(1, '#b558f6');
+
         var data5 = {
             datasets: [{
                 data: [
@@ -450,10 +466,10 @@
                     50,
                 ],
                 backgroundColor: [
-                    "#fec400", // yellow
-                    "#29cb97", // green
-                    "#f65860", // red
-                    "#b558f6", // violet
+                    yellow, // yellow
+                    green, // green
+                    red, // red
+                    purple, // violet
                 ],
                 label: 'Общий анализ', // for legend
                 borderWidth: 0
@@ -579,34 +595,19 @@
             data: data5,
             type: 'pie',
             options: {
-                segmentShowStroke: false,
                 responsive: true,
                 legend: {
                     display: false
                 },
                 tooltips: {
 					enabled: true,
-				}
+				},
+                elements: {
+                    arc: {
+                        borderWidth: 0
+                    }
+                }
             }
-            // polarArea options
-            // type: 'polarArea',
-            // options: {
-            //     legend: {
-            //         display: false,
-            //         position:'bottom',
-            //     },
-            //     scale: {
-            //         display: false,
-            //         ticks: {
-			// 			beginAtZero: true
-			// 		},
-			// 		reverse: true
-            //     },
-			// 	animation: {
-			// 		animateRotate: false,
-			// 		animateScale: true
-			// 	},
-            // }
         })
 
         $(".first-text").text(myChart.data.datasets[0].data[0] + " / " + (myChart.data.datasets[0].data[0]+myChart.data.datasets[0].data[1]))
