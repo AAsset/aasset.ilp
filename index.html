@@ -455,7 +455,8 @@
                     "#f65860", // red
                     "#b558f6", // violet
                 ],
-                label: 'Общий анализ' // for legend
+                label: 'Общий анализ', // for legend
+                borderWidth: 0
             }],
             labels: [
                 "Общий балл",
@@ -578,6 +579,7 @@
             data: data5,
             type: 'pie',
             options: {
+                segmentShowStroke: false,
                 responsive: true,
                 legend: {
                     display: false
@@ -587,22 +589,23 @@
 				}
             }
             // polarArea options
+            // type: 'polarArea',
             // options: {
             //     legend: {
             //         display: false,
             //         position:'bottom',
             //     },
-                // scale: {
-                //     display: false,
-                //     ticks: {
-				// 		beginAtZero: true
-				// 	},
-				// 	reverse: true
-                // },
-				// animation: {
-				// 	animateRotate: false,
-				// 	animateScale: true
-				// },
+            //     scale: {
+            //         display: false,
+            //         ticks: {
+			// 			beginAtZero: true
+			// 		},
+			// 		reverse: true
+            //     },
+			// 	animation: {
+			// 		animateRotate: false,
+			// 		animateScale: true
+			// 	},
             // }
         })
 
