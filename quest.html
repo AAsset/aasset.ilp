@@ -14,9 +14,9 @@
 <body class="d-flex">
 
 <div class="left-menu d-flex flex-column align-items-center justify-content-between">
-    <a href="index.html" class="logo"><img src="public/images/logo.png" alt=""></a>
+    <a href="main.html" class="logo"><img src="public/images/logo.png" alt=""></a>
     <ul class="d-flex flex-column w-100">
-        <li><a href="index.html"><img src="public/images/stats-inactive.png" alt=""></a></li>
+        <li><a href="main.html"><img src="public/images/stats-inactive.png" alt=""></a></li>
         <li class="active"><a href="programms.html"><img src="public/images/maps.png" alt=""></a></li>
         <li><a href="tests.html"><img src="public/images/files-inactive.png" alt=""></a></li>
         <li><a href=""><img src="public/images/settings-inactive.png" alt=""></a></li>
@@ -33,7 +33,7 @@
             </button>
         </nav>
         <h1 class="head-title">
-            <a href="index.html" class="mobile-logo logo mx-2"><img src="public/images/logo.png" alt=""></a>
+            <a href="main.html" class="mobile-logo logo mx-2"><img src="public/images/logo.png" alt=""></a>
             Квест
         </h1>
         <div class="d-flex align-items-center mx-3">
@@ -68,7 +68,7 @@
                     </div>
                     <a class="dropdown-item d-flex align-items-center" href="profile.html"><img class="svg-icon" src="public/images/my-profile.svg" alt=""> Мой профиль</a>
                     <a class="dropdown-item d-flex align-items-center" href="#"><img class="svg-icon" src="public/images/settings.svg" alt=""> Настройки</a>
-                    <a class="dropdown-item border-top d-flex align-items-center" href="authorization.html"><img class="svg-icon" src="public/images/sign-out.svg" alt=""> Выйти из аккаунта</a>
+                    <a class="dropdown-item border-top d-flex align-items-center" href="main.html"><img class="svg-icon" src="public/images/sign-out.svg" alt=""> Выйти из аккаунта</a>
                 </div>
             </div>
         </div>
@@ -116,13 +116,25 @@
                         <strong>Формат сдачи работы:</strong> прикрепленный файл.
                     </p>
                 </div>
-                <a href="" class="attached-file d-flex align-items-center mt-2">
-                    <div class="logo-file d-flex align-items-center justify-content-center"><img src="public/images/attach.svg" alt=""></div>
-                    <div class="d-flex flex-column ml-2">
-                        <h6>5-примеров.zip</h6>
-                        <p>15.7 MB</p>
+                <div class="attached-file d-flex align-items-center mt-4">
+                    <div class="logo-file d-flex align-items-center justify-content-center">
+                        <label for="file-input">
+                            <img src="public/images/attach.svg" alt="">
+                        </label>
+                        <input id="file-input" type="file" name="files[]" style="display: none;"/>
                     </div>
-                </a>
+                    <div class="d-flex flex-column ml-2">
+                        <div class="file-upload-text">
+                            <h6 class="file-name">Прикрепить файл (jpg, png, txt, pdf, zip)</h6>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column ml-2">
+                        <div class="file-info">
+                            <h6>5-примеров.zip</h6>
+                            <p>15.7 MB</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="comments h-auto">
@@ -195,6 +207,23 @@
                 $img.replaceWith($svg);
             }, 'xml');
         });
+
+
+        $('.file-info').hide();
+        function handleFileSelect(evt) {
+            var files = evt.target.files;
+            $('.file-info').show();
+            $('.file-upload-text').hide();
+            for (var i = 0, f; f = files[i]; i++) {
+                $('.file-name').html(f.name);
+                var iSize = f.size / 1024;
+                iSize = (Math.round(iSize * 100) / 100)
+                $('.file-size').html(iSize + 'kb');
+            }
+        }
+        $('#file-input').on('change', function (e) { handleFileSelect(e) });
+
+
         $('.mobile-menu-btn').click(function(e) {
             e.stopPropagation();
             $(".left-menu").toggleClass('show-menu')
