@@ -14,9 +14,9 @@
 <body class="d-flex">
 
 <div class="left-menu d-flex flex-column align-items-center justify-content-between">
-    <a href="index.html" class="logo"><img src="public/images/logo.png" alt=""></a>
+    <a href="main.html" class="logo"><img src="public/images/logo.png" alt=""></a>
     <ul class="d-flex flex-column w-100">
-        <li><a href="index.html"><img src="public/images/stats-inactive.png" alt=""></a></li>
+        <li><a href="main.html"><img src="public/images/stats-inactive.png" alt=""></a></li>
         <li><a href="programms.html"><img src="public/images/maps-inactive.png" alt=""></a></li>
         <li class="active"><a href="tests.html"><img src="public/images/files.png" alt=""></a></li>
         <li><a href=""><img src="public/images/settings-inactive.png" alt=""></a></li>
@@ -60,7 +60,7 @@
                 </div>
                 <a class="dropdown-item d-flex align-items-center" href="profile.html"><img class="svg-icon" src="public/images/my-profile.svg" alt=""> Мой профиль</a>
                 <a class="dropdown-item d-flex align-items-center" href="#"><img class="svg-icon" src="public/images/settings.svg" alt=""> Настройки</a>
-                <a class="dropdown-item border-top d-flex align-items-center" href="authorization.html"><img class="svg-icon" src="public/images/sign-out.svg" alt=""> Выйти из аккаунта</a>
+                <a class="dropdown-item border-top d-flex align-items-center" href="main.html"><img class="svg-icon" src="public/images/sign-out.svg" alt=""> Выйти из аккаунта</a>
             </div>
         </div>
     </div>
@@ -71,12 +71,15 @@
         <div class="col-9 m-auto">
             <div class="d-flex flex-row align-items-center justify-content-between mb-30">
                 <h1>Тест №3</h1>
-                <h4>Оставшееся время 0:59:6</h4>
+                <h4>Оставшееся время 0:59:06</h4>
             </div>
             <div class="question-block d-flex flex-column w-100 h-auto">
+                <div class="d-flex justify-content-end mb-30 stats">
+                    <p>Отвечено 4/10</p>
+                </div>
                 <form class="question-form" class="flex-column">
-                    <div class="form-group mb-4">
-                        <h2 class="question mb-30">1) В каком году журнал Times назвал стул Charles and Ray Eames «Стул столетия».</h2>
+                    <div class="form-group mb-30">
+                        <h2 class="question-with-select mb-4">1) В каком году журнал Times назвал стул Charles and Ray Eames «Стул столетия».</h2>
                         <div class="custom-control custom-radio mb-2">
                             <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
                             <label class="custom-control-label" for="customRadio1">1929</label>
@@ -96,8 +99,8 @@
                     </div>
                 </form>
                 <form class="question-form" class="flex-column">
-                    <div class="form-group mb-4">
-                        <h2 class="question mb-30">2) Основная ошибка Генри Форда после успешного выпуска «Модель Т».</h2>
+                    <div class="form-group mb-30">
+                        <h2 class="question-with-select mb-4">2) Основная ошибка Генри Форда после успешного выпуска «Модель Т».</h2>
                         <div class="custom-control custom-radio mb-2">
                             <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked>
                             <label class="custom-control-label" for="customRadio1">Тратил много денег.</label>
@@ -117,8 +120,8 @@
                     </div>
                 </form>
                 <form class="question-form" class="flex-column">
-                    <div class="form-group mb-4">
-                        <h2 class="question mb-30">3) Самые распространенные модели визуальных заметок.</h2>
+                    <div class="form-group mb-30">
+                        <h2 class="question-with-select mb-4">3) Самые распространенные модели визуальных заметок.</h2>
                         <div class="custom-control custom-radio mb-2">
                             <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
                             <label class="custom-control-label" for="customRadio1">Линейные, визуальные, вертикальные.</label>
@@ -138,8 +141,8 @@
                     </div>
                 </form>
                 <form class="question-form" class="flex-column">
-                    <div class="form-group mb-4">
-                        <h2 class="question mb-30">4) Как создать скетч в иде карты идей?</h2>
+                    <div class="form-group mb-30">
+                        <h2 class="question-with-select mb-4">4) Как создать скетч в иде карты идей?</h2>
                         <div class="custom-control custom-radio mb-2">
                             <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
                             <label class="custom-control-label" for="customRadio1">Выбрать поверхность для карты.</label>
@@ -159,8 +162,12 @@
                     </div>
                 </form>
                 <div class="d-flex justify-content-between">
-                    <a href="./tests.html" class="exit"> Выйти </a>
-                    <a href="./test-result.html" class="finish"> Закончить тест </a>
+                    <a href="./tests.html">
+                        <img src="./public/images/arrow-previous.png" width="18" height="18" alt="">
+                        <span class="exit">Выйти</span></a>
+                    <a href="./test-result.html">
+                        <span class="finish">Закончить тест</span>
+                        <img src="./public/images/arrow-next.png" width="18" height="18" alt=""></a>
                 </div>
             </div>
         </div>
