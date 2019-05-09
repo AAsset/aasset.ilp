@@ -7,660 +7,136 @@
         ILT
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
     <link rel='stylesheet' href='public/stylesheets/normalize.css'/>
     <link rel='stylesheet' href='public/stylesheets/style.css'/>
 
 </head>
-<body class="d-flex">
+<body class="gradient-bg d-flex">
 
-<div class="left-menu d-flex flex-column align-items-center justify-content-between">
-    <a href="index.html" class="logo"><img src="public/images/logo.png" alt=""></a>
-    <ul class="d-flex flex-column w-100">
-        <li class="tour-step active" data-popover-content="#unique-id" data-toggle="popover" data-placement="right">
-            <a href="index.html"><img src="public/images/stats.png" alt=""></a>
-        </li>
-        <li><a href="programms.html"><img src="public/images/maps-inactive.png" alt=""></a></li>
-        <li><a href="tests.html"><img src="public/images/files-inactive.png" alt=""></a></li>
-        <li><a href=""><img src="public/images/settings-inactive.png" alt=""></a></li>
-    </ul>
-    <a href="" class="faq"><img src="public/images/question.png" alt=""></a>
-</div>
+<div class="authorization d-flex align-items-center justify-content-end">
+    <img class="top-left-image" src="public/images/logo-auth.png" alt="">
 
-<div id="unique-id" style="display:none;">
-    <div class="popover-body">
-        <div class="d-flex flex-column popover-content">
-            <h4 class="mb-2">Главная страница</h4>
-            <p class="mb-3">Вы можете увидеть свои результаты тестов зайдя на главную страницу.</p>
-            <a href="#" class="continue d-flex flex-row align-items-center">
-                <span class="mr-1">Продолжить</span>
-                <img src="./public/images/arrow-right.png" width="10" height="10" alt=""></a>
+    <div class="auth-block col-12 col-sm-12 col-md-10 col-lg-6 d-flex">
+        <div class="sign-in d-flex flex-column w-100">
+            <ul class="d-flex w-100 align-items-end">
+                <li class="click-funciton1 active">Вход <div class="border-inside"></div></li>
+                <li class="click-funciton2">Регистрация <div class="border-inside"></div></li>
+                <hr>
+            </ul>
+            <form id="auth-form"  method="post" class="flex-column">
+                <div class="form-group mb-30">
+                    <label for="email-input">E-mail</label>
+                    <input type="email" class="form-control" required id="email-input" aria-describedby="emailHelp" placeholder="Введите ваш E-mail...">
+                </div>
+                <div class="form-group d-flex flex-column">
+                    <label for="pass_log_id">Пароль</label>
+                    <div class="password-input d-flex align-items-center">
+                        <input class="pass_log_id" id="pass_log_id" type="password" required name="pass">
+                        <span toggle="#password-field" class="fa fa-fw fa-eye field_icon toggle-password"></span>
+                    </div>
+                </div>
+                <button type="submit">Вход</button>
+            </form>
+            <form id="reg-form" method="post" class="flex-column">
+                <div class="form-group mb-30">
+                    <label for="email-input">E-mail</label>
+                    <input type="email" class="form-control" required id="email-input" aria-describedby="emailHelp" placeholder="Введите ваш E-mail...">
+                </div>
+                <div class="form-group mb-30 d-flex flex-column">
+                    <label for="pass_log_id">Пароль</label>
+                    <div class="password-input d-flex align-items-center">
+                        <input class="pass_log_id" id="pass_log_id_2" type="password" required name="pass">
+                        <span toggle="#password-field" class="fa fa-fw fa-eye field_icon toggle-password-2"></span>
+                    </div>
+                </div>
+                <div class="form-group d-flex flex-column">
+                    <label for="pass_log_id">Подтвердите пароль</label>
+                    <div class="password-input d-flex align-items-center">
+                        <input class="pass_log_id" id="pass_log_id_3" type="password" required name="pass">
+                        <span toggle="#password-field" class="fa fa-fw fa-eye field_icon toggle-password-3"></span>
+                    </div>
+                </div>
+                <button type="submit">Далее</button>
+            </form>
         </div>
     </div>
-</div>
 
-<div class="content">
-    <div class="upper-head d-flex align-items-center justify-content-between">
-        <nav class="navbar navbar-light mobile-menu">
-            <button class="navbar-toggler mobile-menu-btn" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon mobile-menu-icon"></span>
-            </button>
-        </nav>
-        <h1 class="head-title">
-            <a href="index.html" class="mobile-logo logo mx-2"><img src="public/images/logo.png" alt=""></a>
-            Главная
-        </h1>
-        <div class="d-flex align-items-center mx-3">
-            <div class="timer d-flex align-items-center">
-                <img class="mr-2" src="public/images/timer.png" alt="">
-                <p>20 дней 16:20:59</p>
-            </div>
-            <div class="dropdown">
-                <a class="bell mx-4" id="dropdownNotification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img class="bell-icon" src="public/images/bell.png" alt="">
-                    <img class="status-icon" src="public/images/status.png" alt="">
-                </a>
-                <div class="dropdown-menu dropdown-menu-right mt-4" aria-labelledby="dropdownNotification">
-                    <h2 class="mb-3">Уведомление</h2>
-                    <a class="dropdown-item d-flex align-items-center mb-3 mx-3">
-                        <img class="svg-icon mr-1" src="public/images/bell.png" alt="">
-                        <p>У вас пока нет уведомление</p>
-                    </a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img src="public/images/avatar.png" alt="">
-                </button>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                    <div class="d-flex align-items-center mb-2">
-                        <img class="avatar-image" src="public/images/avatar.png" alt="">
-                        <div class="d-flex flex-column">
-                            <h2>Айым Мухаметкали</h2>
-                            <p>Web designer</p>
-                        </div>
-                    </div>
-                    <a class="dropdown-item d-flex align-items-center" href="profile.html"><img class="svg-icon" src="public/images/my-profile.svg" alt=""> Мой профиль</a>
-                    <a class="dropdown-item d-flex align-items-center" href="#"><img class="svg-icon" src="public/images/settings.svg" alt=""> Настройки</a>
-                    <a class="dropdown-item border-top d-flex align-items-center" href="authorization.html"><img class="svg-icon" src="public/images/sign-out.svg" alt=""> Выйти из аккаунта</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 col-sm-12 col-md-6 col-lg-4 mx-0 mt-4 h-100">
-                <div class="charts d-flex">
-                    <div class="chart-container">
-                        <canvas id="myChart"></canvas>
-                        <img class="image-inside" src="public/images/file-green.png" alt="">
-                    </div>
-                    <div class="text-inside d-flex flex-column justify-content-between py-3">
-                        <p class="first-text"></p>
-                        <p class="sub-text">Общий балл</p>
-                    </div>
-                </div>
-                <div class="charts-2 d-flex flex-column mx-0 mt-4 h-100">
-                    <div class="d-flex align-items-center justify-content-between charts-margin">
-                        <h2>Программа</h2>
-                        <div class="styled">
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option>Июль 2019</option>
-                                <option>Август 2019</option>
-                                <!-- <option>Сентябрь 2019</option> -->
-                            </select>
-                        </div>
-                    </div>
-                    <div class="cover-chart">
-                        <canvas id="myChart4" width="100%" height="250"></canvas>
-                    </div>
-                    <div class="d-flex flex-column mt-4">
-                        <div class="d-flex align-items-center justify-content-between mb-3">
-                            <div class="d-flex align-items-center">
-                                <div class="circle-icon-1 mr-4 d-flex align-items-center justify-content-center"><div class="icon"></div></div>
-                                <p class="hor-bar-label-1"></p>
-                            </div>
-                            <p class="hor-bar-data-1"></p>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between mb-3">
-                            <div class="d-flex align-items-center">
-                                <div class="circle-icon-2 mr-4 d-flex align-items-center justify-content-center"><div class="icon"></div></div>
-                                <p class="hor-bar-label-2"></p>
-                            </div>
-                            <p class="hor-bar-data-2"></p>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between mb-3">
-                            <div class="d-flex align-items-center">
-                                <div class="circle-icon-3 mr-4 d-flex align-items-center justify-content-center"><div class="icon"></div></div>
-                                <p class="hor-bar-label-3"></p>
-                            </div>
-                            <p class="hor-bar-data-3"></p>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between">
-                            <div class="d-flex align-items-center">
-                                <div class="circle-icon-4 mr-4 d-flex align-items-center justify-content-center"><div class="icon"></div></div>
-                                <p class="hor-bar-label-4"></p>
-                            </div>
-                            <p class="hor-bar-data-4"></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-4 mx-0 mt-4 h-100">
-                <div class="charts d-flex">
-                    <div class="chart-container">
-                        <canvas id="myChart2"></canvas>
-                        <img class="image-inside" src="public/images/tick.png" alt="">
-                    </div>
-                    <div class="text-inside d-flex flex-column justify-content-between py-3">
-                        <p class="second-text"></p>
-                        <p class="sub-text">Пройдено</p>
-                    </div>
-                </div>
-                <div class="charts-2 d-flex flex-column mx-0 mt-4 h-100">
-                    <div class="d-flex align-items-center justify-content-between charts-margin">
-                        <h2>Общий анализ</h2>
-                        <div class="styled">
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option>Июль 2019</option>
-                                <option>Август 2019</option>
-                                <!-- <option>Сентябрь 2019</option> -->
-                            </select>
-                        </div>
-                    </div>
-                    <div class="cover-chart pt-2">
-                        <canvas id="myChart5" width="100%" height="70%"></canvas>
-                    </div>
-                    <div class="d-flex flex-column mt-4">
-                        <div class="d-flex align-items-center justify-content-between mb-3">
-                            <div class="d-flex align-items-center">
-                                <div class="circle-icon-2 mr-4 d-flex align-items-center justify-content-center"><div class="icon"></div></div>
-                                <p class="polar-area-label-1"></p>
-                            </div>
-                            <p class="first-text font-weight-bold"></p>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between mb-3">
-                            <div class="d-flex align-items-center">
-                                <div class="circle-icon-5 mr-4 d-flex align-items-center justify-content-center"><div class="icon"></div></div>
-                                <p class="polar-area-label-2"></p>
-                            </div>
-                            <p class="second-text font-weight-bold"></p>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between mb-3">
-                            <div class="d-flex align-items-center">
-                                <div class="circle-icon-4 mr-4 d-flex align-items-center justify-content-center"><div class="icon"></div></div>
-                                <p class="polar-area-label-3"></p>
-                            </div>
-                            <p class="font-weight-bold">4.5 / 5</p>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between">
-                            <div class="d-flex align-items-center">
-                                <div class="circle-icon-1 mr-4 d-flex align-items-center justify-content-center"><div class="icon"></div></div>
-                                <p class="polar-area-label-4"></p>
-                            </div>
-                            <p class="font-weight-bold">112</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-4 mx-0 mt-4 h-100">
-                <div class="charts d-flex">
-                    <div class="chart-container">
-                        <canvas id="myChart3"></canvas>
-                        <img class="image-inside" src="public/images/stats-blue.png" alt="">
-                    </div>
-                    <div class="text-inside d-flex flex-column justify-content-between py-3">
-                        <p class="third-text"></p>
-                        <p class="sub-text">В общем рейтинге</p>
-                    </div>
-                </div>
-                <div class="charts-3 d-flex flex-column mx-0 mt-4 h-100">
-                    <div class="d-flex align-items-center justify-content-between charts-margin">
-                        <h2>Рейтинг</h2>
-                        <div class="styled">
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option>Июль 2019</option>
-                                <option>Август 2019</option>
-                                <!-- <option>Сентябрь 2019</option> -->
-                            </select>
-                        </div>
-                    </div>
-                    <div class="cover-progress d-flex flex-column">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <div class="d-flex align-items-center">
-                                <img src="public/images/avatar-1.png" alt="">
-                                <div class="d-flex flex-column">
-                                    <h4>Зангар Орынбетов</h4>
-                                    <p>IOS developer</p>
-                                </div>
-                            </div>
-                            <h5>627 /1000</h5>
-                        </div>
-                        <div class="progress align-items-center mt-2">
-                            <div class="progress-bar bg-greenblue" role="progressbar" aria-valuenow="62.7"
-                                aria-valuemin="0" aria-valuemax="100" style="width:62.7%">
-                                <span class="sr-only">70% Complete</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cover-progress d-flex flex-column">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <div class="d-flex align-items-center">
-                                <img src="public/images/avatar-2.png" alt="">
-                                <div class="d-flex flex-column">
-                                    <h4>Айым Мухаметкали</h4>
-                                    <p>Web designer</p>
-                                </div>
-                            </div>
-                            <h5>596 /1000</h5>
-                        </div>
-                        <div class="progress align-items-center mt-2">
-                            <div class="progress-bar bg-lighter-purple" role="progressbar" aria-valuenow="59.6"
-                                aria-valuemin="0" aria-valuemax="100" style="width:59.6%">
-                                <span class="sr-only">70% Complete</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cover-progress d-flex flex-column">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <div class="d-flex align-items-center">
-                                <img src="public/images/avatar-3.png" alt="">
-                                <div class="d-flex flex-column">
-                                    <h4>Ару Жынгылбай</h4>
-                                    <p>Web designer</p>
-                                </div>
-                            </div>
-                            <h5>410 /1000</h5>
-                        </div>
-                        <div class="progress align-items-center mt-2">
-                            <div class="progress-bar bg-marigold" role="progressbar" aria-valuenow="41"
-                                aria-valuemin="0" aria-valuemax="100" style="width:41%">
-                                <span class="sr-only">70% Complete</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cover-progress d-flex flex-column">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <div class="d-flex align-items-center">
-                                <img src="public/images/avatar-4.png" alt="">
-                                <div class="d-flex flex-column">
-                                    <h4>Нуржан Орманали</h4>
-                                    <p>IOS developer</p>
-                                </div>
-                            </div>
-                            <h5>376 /1000</h5>
-                        </div>
-                        <div class="progress align-items-center mt-2">
-                            <div class="progress-bar bg-dark-sky-blue" role="progressbar" aria-valuenow="37.6"
-                                aria-valuemin="0" aria-valuemax="100" style="width:37.6%">
-                                <span class="sr-only">70% Complete</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cover-progress d-flex flex-column">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <div class="d-flex align-items-center">
-                                <img src="public/images/avatar-5.png" alt="">
-                                <div class="d-flex flex-column">
-                                    <h4>Али Асылов</h4>
-                                    <p>Graph designer</p>
-                                </div>
-                            </div>
-                            <h5>315 /1000</h5>
-                        </div>
-                        <div class="progress align-items-center mt-2">
-                            <div class="progress-bar bg-watermelon" role="progressbar" aria-valuenow="31.5"
-                                aria-valuemin="0" aria-valuemax="100" style="width:31.5%">
-                                <span class="sr-only">70% Complete</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
-
 <script language="JavaScript" type="text/javascript" src="public/libs/jquery/dist/jquery.min.js"></script>
 <script language="JavaScript" type="text/javascript" src="public/libs/popper.js/dist/umd/popper.js"></script>
 <script language="JavaScript" type="text/javascript" src="public/libs/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-style@latest/dist/chartjs-plugin-style.min.js"></script>
-<script src="public/chart-border-radius.min.js"></script>
+
 
 <script>
     $(document).ready(function () {
-        $('.mobile-menu-btn').click(function(e) {
-            e.stopPropagation();
-            $('.left-menu').toggleClass('show-menu')
+        $(".click-funciton1").click(function () {
+            $(".click-funciton1").addClass("active");
+            $(".click-funciton2").removeClass("active");
+            $("#auth-form").css("display", "flex");
+            $("#reg-form").css("display", "none");
         });
-        $('body').click(function(e) {
-            if ($('.left-menu').hasClass('show-menu')) {
-                $('.left-menu').toggleClass('show-menu')
-            }
-        });
-
-        var number = 596;
-        var number2 = 59.6;
-        var number3 = 10;
-
-        var data = {
-            labels: [
-                "Общий балл",
-                ""
-            ],
-            datasets: [
-                {
-                    data: [number, 1000-number],
-                    backgroundColor: [
-                        "#29cb97",
-                        "#e5e9f2"
-                    ],
-                    hoverBackgroundColor: [
-                        "#29cb97",
-                        "#e5e9f2"
-                    ],
-                    hoverBorderColor: [
-                        "#FF6384",
-                        "#ffffff"
-                    ],
-                    borderWidth: [
-                        0,
-                        0
-                    ]
-                }]
-        };
-        var data2 = {
-            labels: [
-                "пройдено",
-                ""
-            ],
-            datasets: [
-                {
-                    data: [number2, 100-number2],
-                    backgroundColor: [
-                        "#b558f6",
-                        "#e5e9f2"
-                    ],
-                    hoverBackgroundColor: [
-                        "#b558f6",
-                        "#e5e9f2"
-                    ],
-                    hoverBorderColor: [
-                        "#b558f6",
-                        "#ffffff"
-                    ],
-                    borderWidth: [
-                        0,
-                        0
-                    ]
-                }]
-        };
-        var data3 = {
-            labels: [
-                "В общем рейтинге",
-                ""
-            ],
-            datasets: [
-                {
-                    data: [number3, 12-number3],
-                    backgroundColor: [
-                        "#4072ee",
-                        "#e5e9f2"
-                    ],
-                    hoverBackgroundColor: [
-                        "#4072ee",
-                        "#e5e9f2"
-                    ],
-                    hoverBorderColor: [
-                        "#4072ee",
-                        "#e5e9f2"
-                    ],
-                    borderWidth: [
-                        0,
-                        0
-                    ]
-                }]
-        };
-        var data4 = {
-            labels: ["Пройденные тесты", "Просмотренные видео", "Прочитаны книги", "Просмотренные фильмы"],
-            datasets: [{
-                shadowOffsetX: 0,
-                shadowOffsetY: 5,
-                shadowBlur: 10,
-                shadowColor: 'rgba(0, 0, 0, 0.1)',
-
-                label: 'Программы',
-                data: [14, 66, 78, 30],
-                backgroundColor: [
-                    '#29cb97',
-                    '#b558f6',
-                    '#4072ee',
-                    '#fec400'
-                ],
-
-                borderWidth: 0
-            }]
-        };
-
-        // Pie gradiend Background
-        var ctx = document.getElementById('myChart5').getContext("2d");
-        var yellow = ctx.createLinearGradient(0, 0, 0, 200);
-        yellow.addColorStop(0, '#ffe400');
-        yellow.addColorStop(1, '#fec400');
-        var green = ctx.createLinearGradient(0, 100, 0, 300);
-        green.addColorStop(0, '#53e7c8');
-        green.addColorStop(1, '#29cb97');
-        var red = ctx.createLinearGradient(0, 100, 0, 400);
-        red.addColorStop(0, '#fb9199');
-        red.addColorStop(1, '#f65860');
-        var purple = ctx.createLinearGradient(0, 0, 0, 400);
-        purple.addColorStop(0, '#db91fb');
-        purple.addColorStop(1, '#b558f6');
-
-        var data5 = {
-            datasets: [{
-                data: [
-                    23,
-                    17,
-                    26,
-                    50,
-                ],
-                backgroundColor: [
-                    yellow, // yellow
-                    green, // green
-                    red, // red
-                    purple, // violet
-                ],
-                label: 'Общий анализ', // for legend
-                borderWidth: 0
-            }],
-            labels: [
-                "Общий балл",
-                "Пройдено",
-                "Рейтинг",
-                "Комментарии"
-            ]
-        };
-
-        var draw = Chart.controllers.doughnut.prototype.draw;
-        Chart.controllers.doughnut = Chart.controllers.doughnut.extend({
-            draw: function() {
-                draw.apply(this, arguments);
-                let ctx = this.chart.chart.ctx;
-                let _fill = ctx.fill;
-                ctx.fill = function() {
-                    ctx.save();
-                    ctx.shadowColor = 'rgba(0, 0, 0, 0.2)';
-                    ctx.shadowBlur = 10;
-                    ctx.shadowOffsetX = 0;
-                    ctx.shadowOffsetY = 5;
-                    _fill.apply(this, arguments)
-                    ctx.restore();
-                }
-            }
+        $(".click-funciton2").click(function () {
+            $(".click-funciton2").addClass("active");
+            $(".click-funciton1").removeClass("active");
+            $("#auth-form").css("display", "none");
+            $("#reg-form").css("display", "flex");
         });
 
-        var myChart = new Chart(document.getElementById('myChart'), {
-            type: 'doughnut',
-            data: data,
-            options: {
-                aspectRatio: 1,
-                responsive: true,
-                legend: {
-                    display: false
-                },
-                cutoutPercentage: 90,
-                tooltips: {
-                    enabled: false
-                }
-            }
+        $("#auth-form").on("submit",function(e) {
+            e.preventDefault(); // cancel submission
+            window.location.replace("main.html");
         });
-        var myChart2 = new Chart(document.getElementById('myChart2'), {
-            type: 'doughnut',
-            data: data2,
-            options: {
-                aspectRatio: 1,
-                responsive: true,
-                legend: {
-                    display: false
-                },
-                cutoutPercentage: 90,
-                tooltips: {
-                    enabled: false
-                }
-            }
+        $("#reg-form").on("submit",function(e) {
+            e.preventDefault(); // cancel submission
+            window.location.replace("registration.html");
         });
-        var myChart3 = new Chart(document.getElementById('myChart3'), {
-            type: 'doughnut',
-            data: data3,
-            options: {
-                aspectRatio: 1,
-                responsive: true,
-                legend: {
-                    display: false
-                },
-                cutoutPercentage: 90,
-                tooltips: {
-                    enabled: false
-                }
-            }
-        });
-        var myChart4 = new Chart(document.getElementById('myChart4'), {
-            type: 'horizontalBar',
-            data: data4,
-            options: {
-                cornerRadius: 8,
-                legend: {
-                    display: false,
-                    position: 'bottom',
-                    labels: {
-                        fontColor: "#000080",
-                    }
-                },
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: {
-                    xAxes: [{
-                        position: 'top',
-                        ticks: {
-                            fontFamily: 'Roboto',
-                            fontColor: '#748aa1',
-                            stepSize: 25,
-                            min: 0,
-                            max: 100,// Your absolute max value
-                            callback: function (value) {
-                                return (value / 100 * 100).toFixed(0) + '%'; // convert it to percentage
-                            },
-                        },
-                        scaleLabel: {
-                            display: false,
-                            labelString: 'Percentage',
-                        }
-                    }],
-                    yAxes: [{
-                        display: false,
-                        barPercentage: .5,
-                        categoryPercentage: .5,
-                        ticks: {
-                            beginAtZero: true
-                        },
-                        gridLines: {
-                            display: false
-                        }
-                    }]
-                }
-            }
-        });
-        var myChart5 = new Chart(document.getElementById('myChart5'), {
-            data: data5,
-            type: 'pie',
-            options: {
-                responsive: true,
-                legend: {
-                    display: false
-                },
-                tooltips: {
-					enabled: true,
-				},
-                elements: {
-                    arc: {
-                        borderWidth: 0
-                    }
-                }
-            }
-        })
 
-        $(".first-text").text(myChart.data.datasets[0].data[0] + " / " + (myChart.data.datasets[0].data[0]+myChart.data.datasets[0].data[1]))
-        $(".second-text").text(parseFloat(100*myChart2.data.datasets[0].data[0]/(myChart2.data.datasets[0].data[1]+myChart2.data.datasets[0].data[0])).toPrecision(3) + "%")
-        $(".third-text").text(myChart3.data.datasets[0].data[0] + " место");
-        $(".hor-bar-label-1").text(myChart4.data.labels[0]);
-        $(".hor-bar-data-1").text(myChart4.data.datasets[0].data[0] + "%");
-        $(".hor-bar-label-2").text(myChart4.data.labels[1]);
-        $(".hor-bar-data-2").text(myChart4.data.datasets[0].data[0] + "%");
-        $(".hor-bar-label-3").text(myChart4.data.labels[2]);
-        $(".hor-bar-data-3").text(myChart4.data.datasets[0].data[0] + "%");
-        $(".hor-bar-label-4").text(myChart4.data.labels[3]);
-        $(".hor-bar-data-4").text(myChart4.data.datasets[0].data[0] + "%");
-        $(".polar-area-label-1").text(myChart5.data.labels[0]);
-        $(".polar-area-label-2").text(myChart5.data.labels[1]);
-        $(".polar-area-label-3").text(myChart5.data.labels[2]);
-        $(".polar-area-label-4").text(myChart5.data.labels[3]);
+        $('img[src$=".svg"]').each(function() {
+            var $img = jQuery(this);
+            var imgURL = $img.attr('src');
+            var attributes = $img.prop("attributes");
+
+            $.get(imgURL, function(data) {
+                // Get the SVG tag, ignore the rest
+                var $svg = jQuery(data).find('svg');
+
+                // Remove any invalid XML tags
+                $svg = $svg.removeAttr('xmlns:a');
+
+                // Loop through IMG attributes and apply on SVG
+                $.each(attributes, function() {
+                    $svg.attr(this.name, this.value);
+                });
+
+                // Replace IMG with SVG
+                $img.replaceWith($svg);
+            }, 'xml');
+        });
     });
-</script>
-<script>
-    var zIndex = 999;
-    function start() {
-        addBackDrop();
-    }
 
-    function addBackDrop() {
-        var backdrop = document.createElement('div');
-            backdrop.className = 'tour-backdrop';
-            backdrop.style.zIndex = zIndex;
-        document.body.appendChild(backdrop);
-    }
+    $(document).on('click', '.toggle-password', function() {
 
-    function removeBackDrop() {
-        $('.tour-backdrop').remove();
-    }
+        $(this).toggleClass("fa-eye fa-eye-slash");
 
-    start();
-
-    $('.tour-step').css('z-index', zIndex+1);
-    var dataTogglePopover = $('[data-toggle=popover]');
-    dataTogglePopover.popover({
-        html : true,
-        trigger: 'focus',
-        content: function() {
-            var content = $(this).attr('data-popover-content');
-            return $(content).children(".popover-body").html();
-        }
+        var input = $("#pass_log_id");
+        input.attr('type') === 'password' ? input.attr('type','text') : input.attr('type','password')
     });
-    dataTogglePopover.popover('show');
 
-    $('.continue').on('click', function() {
-        removeBackDrop();
-        dataTogglePopover.popover('hide');
+    $(document).on('click', '.toggle-password-2', function() {
+
+        $(this).toggleClass("fa-eye fa-eye-slash");
+
+        var input = $("#pass_log_id_2");
+        input.attr('type') === 'password' ? input.attr('type','text') : input.attr('type','password')
+    });
+
+    $(document).on('click', '.toggle-password-3', function() {
+
+        $(this).toggleClass("fa-eye fa-eye-slash");
+
+        var input = $("#pass_log_id_3");
+        input.attr('type') === 'password' ? input.attr('type','text') : input.attr('type','password')
     });
 </script>
 </body>
