@@ -37,7 +37,7 @@
     <a href="main.html" class="logo"><img src="public/images/logo.png" alt=""></a>
     <ul class="d-flex flex-column w-100">
         <li><a href="main.html"><img src="public/images/stats-inactive.png" alt=""></a></li>
-        <li class="active">
+        <li class="tour-step active">
             <a href="programms.html"><img src="public/images/maps.png" alt=""></a>
         </li>
         <li>
@@ -46,6 +46,18 @@
         <li><a href=""><img src="public/images/settings-inactive.png" alt=""></a></li>
     </ul>
     <a href="" class="faq"><img src="public/images/question.png" alt=""></a>
+</div>
+
+<div id="unique-id" style="display:none;">
+    <div class="popover-body">
+        <div class="d-flex flex-column popover-content">
+            <h4 class="mb-2"></h4>
+            <p class="mb-3"></p>
+            <a href="#" class="continue d-flex flex-row align-items-center">
+                <span class="mr-1">Продолжить</span>
+                <img src="./public/images/arrow-right.png" width="10" height="10" alt=""></a>
+        </div>
+    </div>
 </div>
 
 <div class="my-profle">
@@ -473,6 +485,66 @@
             }
         });
     });
+</script>
+<script>
+    (function () {
+    var step = 0;
+        steps = [
+            {
+                title: 'Обучение',
+                text: 'На этой страница есть задания, которые вы должны выполнить до окончания обучения/стажировки.',
+                img: './public/images/maps-inactive.png',
+                active: './public/images/maps.png'
+            }
+        ],
+        zIndex = 999,
+        leftMenuItems = $('.left-menu li');
+
+    function start() {
+        addBackDrop();
+        updateContent(step);
+        showPopover();
+    }
+    start();
+
+    $(document).on('click', '.popover .continue', function() {
+        window.location.href = 'tour-4.html';
+    });
+
+    function showPopover() {
+        var dataTogglePopover = $('[data-toggle=popover]');
+        $('.tour-step').css('z-index', zIndex+1);
+        dataTogglePopover.popover({
+            html : true,
+            trigger: 'focus',
+            content: function() {
+                var content = $(this).attr('data-popover-content');
+                return $(content).children(".popover-body").html();
+            }
+        });
+        dataTogglePopover.popover('show');
+    }
+
+    function updateContent(step) {
+        document.querySelector('.tour-step').attributes.length = 0;
+        $(leftMenuItems[step+1]).attr({
+            'data-popover-content': '#unique-id',
+            'data-toggle': 'popover',
+            'data-placement': 'right'
+        });
+
+        $('.tour-step').css('z-index', zIndex+1);
+        $('.popover-content h4').html(steps[step].title);
+        $('.popover-content p').html(steps[step].text);
+    }
+
+    function addBackDrop() {
+        var backdrop = document.createElement('div');
+            backdrop.className = 'tour-backdrop';
+            backdrop.style.zIndex = zIndex;
+        document.body.appendChild(backdrop);
+    }
+    })();
 </script>
 </body>
 </html>

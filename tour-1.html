@@ -37,7 +37,7 @@
     <a href="main.html" class="logo"><img src="public/images/logo.png" alt=""></a>
     <ul class="d-flex flex-column w-100">
         <li><a href="main.html"><img src="public/images/stats-inactive.png" alt=""></a></li>
-        <li class="active">
+        <li class="tour-step active">
             <a href="programms.html"><img src="public/images/maps.png" alt=""></a>
         </li>
         <li>
@@ -46,6 +46,18 @@
         <li><a href=""><img src="public/images/settings-inactive.png" alt=""></a></li>
     </ul>
     <a href="" class="faq"><img src="public/images/question.png" alt=""></a>
+</div>
+
+<div id="unique-id" style="display:none;">
+    <div class="popover-body">
+        <div class="d-flex flex-column popover-content">
+            <h4 class="mb-2"></h4>
+            <p class="mb-3"></p>
+            <a href="#" class="continue d-flex flex-row align-items-center">
+                <span class="mr-1">Продолжить</span>
+                <img src="./public/images/arrow-right.png" width="10" height="10" alt=""></a>
+        </div>
+    </div>
 </div>
 
 <div class="my-profle">
@@ -472,6 +484,13 @@
                 $('.left-menu').toggleClass('show-menu')
             }
         });
+    });
+</script>
+<script>
+    $('#exampleModalCenter').modal();
+
+    $('#startTourBtn').on('click', function() {
+        window.location.href = 'tour-2.html';
     });
 </script>
 </body>
