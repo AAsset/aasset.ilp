@@ -39,17 +39,19 @@
 </div>
 
 <div class="content">
-    <div class="upper-head d-flex align-items-center justify-content-between">
-        <nav class="navbar navbar-light mobile-menu">
-            <button class="navbar-toggler mobile-menu-btn" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon mobile-menu-icon"></span>
-            </button>
-        </nav>
-        <h1 class="head-title">
-            <a href="index.html" class="mobile-logo logo mx-2"><img src="public/images/logo.png" alt=""></a>
-            Главная
-        </h1>
-        <div class="d-flex align-items-center mx-3">
+    <div class="upper-head d-sm-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center">
+            <nav class="navbar navbar-light mobile-menu">
+                <button class="navbar-toggler mobile-menu-btn" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon mobile-menu-icon"></span>
+                </button>
+            </nav>
+            <h1 class="head-title">
+                <a href="index.html" class="mobile-logo logo mx-2"><img src="public/images/logo.png" alt=""></a>
+                Главная
+            </h1>
+        </div>
+        <div class="d-flex align-items-center justify-content-end">
             <div class="timer d-flex align-items-center">
                 <img class="mr-2" src="public/images/timer.png" alt="">
                 <p>20 дней 16:20:59</p>
@@ -441,7 +443,7 @@
                 borderWidth: 0
             }]
         };
-        var data= [23,17,26,50];
+        //var data= [23,17,26,50];
         var ctx = document.getElementById('myChart5').getContext("2d");
         
         var yellow = ctx.createLinearGradient(0, 0, 0, 200);
@@ -458,7 +460,7 @@
         purple.addColorStop(1, '#b558f6');
         var data5 = {
             datasets: [{
-                data: data,
+                data: [23,17,26,50],
                 backgroundColor: [
                     yellow, // yellow
                     green, // green
