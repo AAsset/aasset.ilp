@@ -27,17 +27,19 @@
 </div>
 
 <div class="content">
-    <div class="upper-head d-flex align-items-center justify-content-between">
-        <nav class="navbar navbar-light mobile-menu">
-            <button class="navbar-toggler mobile-menu-btn" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon mobile-menu-icon"></span>
-            </button>
-        </nav>
-        <h1 class="head-title">
-            <a href="main.html" class="mobile-logo logo mx-2"><img src="public/images/logo.png" alt=""></a>
-            Главная
-        </h1>
-        <div class="d-flex align-items-center mx-3">
+    <div class="upper-head d-sm-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center">
+            <nav class="navbar navbar-light mobile-menu">
+                <button class="navbar-toggler mobile-menu-btn" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon mobile-menu-icon"></span>
+                </button>
+            </nav>
+            <h1 class="head-title">
+                <a href="main.html" class="mobile-logo logo mx-2"><img src="public/images/logo.png" alt=""></a>
+                Главная
+            </h1>
+        </div>
+        <div class="d-flex align-items-center justify-content-end">
             <div class="timer d-flex align-items-center">
                 <img class="mr-2" src="public/images/timer.png" alt="">
                 <p>20 дней 16:20:59</p>
@@ -433,34 +435,27 @@
         // Pie gradiend Background
         var ctx = document.getElementById('myChart5').getContext("2d");
         var yellow = ctx.createLinearGradient(0, 0, 0, 200);
-        yellow.addColorStop(0, '#ffe400');
+        yellow.addColorStop(0, '#ffe400');   
         yellow.addColorStop(1, '#fec400');
         var green = ctx.createLinearGradient(0, 100, 0, 300);
-        green.addColorStop(0, '#53e7c8');
+        green.addColorStop(0, '#53e7c8');   
         green.addColorStop(1, '#29cb97');
         var red = ctx.createLinearGradient(0, 100, 0, 400);
-        red.addColorStop(0, '#fb9199');
+        red.addColorStop(0, '#fb9199');   
         red.addColorStop(1, '#f65860');
         var purple = ctx.createLinearGradient(0, 0, 0, 400);
-        purple.addColorStop(0, '#db91fb');
+        purple.addColorStop(0, '#db91fb');   
         purple.addColorStop(1, '#b558f6');
-
         var data5 = {
             datasets: [{
-                data: [
-                    23,
-                    17,
-                    26,
-                    50,
-                ],
+                data: [23,17,26,50],
                 backgroundColor: [
                     yellow, // yellow
                     green, // green
                     red, // red
                     purple, // violet
                 ],
-                label: 'Общий анализ', // for legend
-                borderWidth: 0
+                label: 'Общий анализ' // for legend,
             }],
             labels: [
                 "Общий балл",
@@ -591,11 +586,29 @@
 					enabled: true,
 				},
                 elements: {
-                    arc: {
-                        borderWidth: 0
-                    }
-                }
+                      arc: {
+                          borderWidth: 0
+                      }
+                  }
             }
+            // polarArea options
+            // options: {
+            //     legend: {
+            //         display: false,
+            //         position:'bottom',
+            //     },
+                // scale: {
+                //     display: false,
+                //     ticks: {
+				// 		beginAtZero: true
+				// 	},
+				// 	reverse: true
+                // },
+				// animation: {
+				// 	animateRotate: false,
+				// 	animateScale: true
+				// },
+            // }
         })
 
         $(".first-text").text(myChart.data.datasets[0].data[0] + " / " + (myChart.data.datasets[0].data[0]+myChart.data.datasets[0].data[1]))
