@@ -595,7 +595,7 @@ pre code {
 
 @media (max-width: 576px){
     /*making content taller on xs devices*/
-    .registration, .my-profle, .content, .programms, .tests, .test{
+    .registration, .my-profle, .content, .programms, .tests, .test, .inside-object{
         padding:0px!important;
     }
     .registration-block, 
@@ -11343,8 +11343,8 @@ h1 {
 }
 
 .inside-object .upper-head {
-    margin-left: 0;
-    margin-right: 0
+    margin-left: 15px;
+    margin-right: 15px
 }
 
 .inside-object .main-media-cover {
