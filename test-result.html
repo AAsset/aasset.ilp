@@ -26,9 +26,19 @@
 
 <div class="test">
 
-<div class="upper-head d-flex align-items-center justify-content-between">
-    <h1>Тесты</h1>
+<div class="upper-head d-sm-flex align-items-center justify-content-between mx-3">
     <div class="d-flex align-items-center">
+        <nav class="navbar navbar-light mobile-menu">
+            <button class="navbar-toggler mobile-menu-btn" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon mobile-menu-icon"></span>
+            </button>
+        </nav>
+        <h1 class="head-title">
+            <a href="index.html" class="mobile-logo logo mx-2"><img src="public/images/logo.png" alt=""></a>
+            Тесты
+        </h1>
+    </div>
+    <div class="d-flex align-items-center justify-content-end">
         <div class="timer d-flex align-items-center">
             <img class="mr-2" src="public/images/timer.png" alt="">
             <p>20 дней 16:20:59</p>
@@ -42,7 +52,7 @@
                 <h2 class="mb-3">Уведомление</h2>
                 <a class="dropdown-item d-flex align-items-center mb-3 mx-3">
                     <img class="svg-icon mr-1" src="public/images/bell.png" alt="">
-                    <p>У вас пока нет уведомление</p>
+                    <p>У вас пока нет уведомлении</p>
                 </a>
             </div>
         </div>
@@ -68,7 +78,7 @@
 
 <div class="container-fluid d-flex justify-content-center align-items-center">
     <div class="row">
-        <div class="col-7 m-auto">
+        <div class="col-xs-12 col-sm-7 m-auto">
             <div class="d-flex flex-column align-items-center text-center mb-30">
                 <img src="./public/images/test-result.png" alt="">
                 <h1 class="mb-30">Отлично! Вы ответили на все вопросы и получили +5 баллов!</h1>
@@ -77,10 +87,11 @@
             </div>
         </div>
     </div>
-    <p class="d-flex align-items-center copyright">
+    
+</div>
+    <p class="d-sm-flex align-items-center copyright w-100 text-center">
         <img class="icon" src="./public/images/copyright.png" alt=""> 2019 ILovePeople. Все права защищены.
     </p>
-</div>
 
 </div>
 
@@ -90,6 +101,15 @@
 
 <script>
     $(document).ready(function () {
+        $('.mobile-menu-btn').click(function(e) {
+            e.stopPropagation();
+            $('.left-menu').toggleClass('show-menu')
+        });
+        $('body').click(function(e) {
+            if ($('.left-menu').hasClass('show-menu')) {
+                $('.left-menu').toggleClass('show-menu')
+            }
+        });
         $('img[src$=".svg"]').each(function() {
             var $img = jQuery(this);
             var imgURL = $img.attr('src');
