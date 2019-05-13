@@ -593,10 +593,28 @@ pre code {
     min-height: 100vh;
 }
 
-@media (max-width: 576px){
+.card-mt{
+    margin-top: 29px;
+}
+.card-mb{
+    margin-bottom: 29px;
+}
+.card-mr{
+    margin-right: 29px;
+}
+.card-ml{
+    margin-left: 29px;
+}
+
+.h-40{
+    height:40px !important;
+}
+
+@media (max-width: 575.98px){
     /*making content taller on xs devices*/
     .registration, .my-profle, .content, .programms, .tests, .test, .inside-object{
-        padding:0px!important;
+        padding-right:15px !important;
+        padding-left:15px !important;
     }
     .registration-block, 
     .test .question-block {
@@ -608,9 +626,6 @@ pre code {
     .container-fluid{
         margin-top:auto;
         margin-bottom:auto;
-    }
-    .upper-head {
-        margin-bottom: 0rem!important;
     }
     .head-title{
         height:52px;
@@ -8587,27 +8602,27 @@ button.bg-dark:focus {
 }
 
 .m-0 {
-    margin: 0 !important
+    margin: 0px !important
 }
 
 .mt-0,
 .my-0 {
-    margin-top: 0 !important
+    margin-top: 0px !important
 }
 
 .mr-0,
 .mx-0 {
-    margin-right: 0 !important
+    margin-right: 0px !important
 }
 
 .mb-0,
 .my-0 {
-    margin-bottom: 0 !important
+    margin-bottom: 0px !important
 }
 
 .ml-0,
 .mx-0 {
-    margin-left: 0 !important
+    margin-left: 0px !important
 }
 
 .m-1 {
@@ -10708,7 +10723,7 @@ body {
 
 h1 {
     font-family: Roboto;
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
@@ -10798,7 +10813,7 @@ h1 {
     -webkit-box-shadow: 0 0 5px 0 #e5e9f2;
     box-shadow: 0 0 5px 0 #e5e9f2;
     width: 5rem;
-    padding-top: 2rem;
+    padding-top: 33px;
     height: 100vh
 }
 
@@ -10887,14 +10902,11 @@ h1 {
 
 .content {
     width: calc(100vw - 5rem);
-    padding: 1.9rem;
+    padding-top: 30px;
+    padding-right:30px;
+    padding-left:30px;
     max-height: 100vh;
     overflow-y: auto
-}
-
-.content .upper-head {
-    margin-left: 15px;
-    margin-right: 15px
 }
 
 .content .timer img {
@@ -10932,7 +10944,7 @@ h1 {
 }
 
 .content .row .charts {
-    padding: 1.9rem;
+    padding: 24px;
     -webkit-box-shadow: 0 1px 4px 0 #d6dcea;
     box-shadow: 0 1px 4px 0 #d6dcea;
     background: #fff;
@@ -10972,7 +10984,7 @@ h1 {
 }
 
 .content .row .charts .text-inside p {
-    font-size: 2.2rem;
+    font-size: 26px;
     color: #31394d
 }
 
@@ -11170,14 +11182,12 @@ h1 {
 }
 
 .upper-head {
-    margin-bottom: 2.5rem;
-    margin-right: 15px;
-    margin-left: 15px
+    margin-bottom: 40px;
 }
 
 .upper-head .timer img {
-    width: 1.5rem;
-    height: 1.5rem
+    width: 20px;
+    height: 20px
 }
 
 .upper-head .timer p {
@@ -11187,7 +11197,7 @@ h1 {
     font-stretch: normal;
     line-height: normal;
     letter-spacing: normal;
-    font-size: .9rem
+    font-size: 14px
 }
 
 .upper-head .bell {
@@ -11195,16 +11205,16 @@ h1 {
 }
 
 .upper-head .bell .bell-icon {
-    width: 1.5rem;
-    height: 1.5rem
+    width: 20px;
+    height: 20px
 }
 
 .upper-head .bell .status-icon {
     position: absolute;
     right: -.5rem;
     top: -.5rem;
-    width: 2rem;
-    height: 2rem;
+    width: 30px;
+    height: 30px;
     -o-object-fit: contain;
     object-fit: contain
 }
