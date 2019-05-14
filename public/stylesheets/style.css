@@ -593,6 +593,23 @@ pre code {
     min-height: 100vh;
 }
 
+.card-mt{
+    margin-top: 1.8125rem;
+}
+.card-mb{
+    margin-bottom: 1.8125rem;
+}
+.card-mr{
+    margin-right: 1.8125rem;
+}
+.card-ml{
+    margin-left: 1.8125rem;
+}
+
+.h-40{
+    height: 2.5rem !important;
+}
+
 @media (max-height: 500px){
     
 }
@@ -8531,27 +8548,27 @@ button.bg-dark:focus {
 }
 
 .m-0 {
-    margin: 0 !important
+    margin: 0px !important
 }
 
 .mt-0,
 .my-0 {
-    margin-top: 0 !important
+    margin-top: 0px !important
 }
 
 .mr-0,
 .mx-0 {
-    margin-right: 0 !important
+    margin-right: 0px !important
 }
 
 .mb-0,
 .my-0 {
-    margin-bottom: 0 !important
+    margin-bottom: 0px !important
 }
 
 .ml-0,
 .mx-0 {
-    margin-left: 0 !important
+    margin-left: 0px !important
 }
 
 .m-1 {
@@ -10831,7 +10848,7 @@ h1 {
 
 .content {
     width: calc(100vw - 5rem);
-    padding: 1.9rem;
+    padding: 1.875rem;
     max-height: 100vh;
     overflow-y: auto
 }
