@@ -39,17 +39,20 @@
 </div>
 
 <div class="content">
-    <div class="upper-head d-flex align-items-center justify-content-between">
-        <nav class="navbar navbar-light mobile-menu">
-            <button class="navbar-toggler mobile-menu-btn" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon mobile-menu-icon"></span>
-            </button>
-        </nav>
-        <h1 class="head-title">
-            <a href="main.html" class="mobile-logo logo mx-2"><img src="public/images/logo.png" alt=""></a>
-            Главная
-        </h1>
-        <div class="d-flex align-items-center mx-3">
+    <div class="upper-head d-sm-flex flex-column flex-sm-row flex-md-row flex-lg-row flex-xl-row
+    align-items-between justify-content-between">
+        <div class="d-flex align-items-center">
+            <nav class="navbar navbar-light mobile-menu">
+                <button class="navbar-toggler mobile-menu-btn" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon mobile-menu-icon"></span>
+                </button>
+            </nav>
+            <h1 class="head-title">
+                <a href="main.html" class="mobile-logo logo mx-2"><img src="public/images/logo.png" alt=""></a>
+                Главная
+            </h1>
+        </div>
+        <div class="d-flex align-items-center justify-content-end">
             <div class="timer d-flex align-items-center">
                 <img class="mr-2" src="public/images/timer.png" alt="">
                 <p>20 дней 16:20:59</p>
@@ -89,7 +92,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-sm-12 col-md-6 col-lg-4 mx-0 mt-4 h-100">
-                <div class="charts d-flex">
+                <div class="charts d-flex align-items-center">
                     <div class="chart-container">
                         <canvas id="myChart"></canvas>
                         <img class="image-inside" src="public/images/file-green.png" alt="">
@@ -99,7 +102,7 @@
                         <p class="sub-text">Общий балл</p>
                     </div>
                 </div>
-                <div class="charts-2 d-flex flex-column mx-0 mb-3 h-100">
+                <div class="charts-2 d-flex flex-column mx-0 mt-4 h-100">
                     <div class="d-flex align-items-center justify-content-between charts-margin">
                         <h2>Программа</h2>
                         <div class="styled">
@@ -146,7 +149,7 @@
                 </div>
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-4 mx-0 mt-4 h-100">
-                <div class="charts d-flex">
+                <div class="charts d-flex align-items-center">
                     <div class="chart-container">
                         <canvas id="myChart2"></canvas>
                         <img class="image-inside" src="public/images/tick.png" alt="">
@@ -156,7 +159,7 @@
                         <p class="sub-text">Пройдено</p>
                     </div>
                 </div>
-                <div class="charts-2 d-flex flex-column mx-0 mb-3 h-100">
+                <div class="charts-2 d-flex flex-column mx-0 mt-4 h-100">
                     <div class="d-flex align-items-center justify-content-between charts-margin">
                         <h2>Общий анализ</h2>
                         <div class="styled">
@@ -202,8 +205,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-4 mx-0 mt-4 h-100">
-                <div class="charts d-flex">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 mx-0 mt-4 h-100 mb-3">
+                <div class="charts d-flex align-items-center">
                     <div class="chart-container">
                         <canvas id="myChart3"></canvas>
                         <img class="image-inside" src="public/images/stats-blue.png" alt="">
@@ -213,7 +216,7 @@
                         <p class="sub-text">В общем рейтинге</p>
                     </div>
                 </div>
-                <div class="charts-3 d-flex flex-column mx-0 mt-4 h-100">
+                <div class="charts-3 d-flex flex-column mx-0 mt-4 h-100 mb-3">
                     <div class="d-flex align-items-center justify-content-between charts-margin">
                         <h2>Рейтинг</h2>
                         <div class="styled">
@@ -456,15 +459,9 @@
         var purple = ctx.createLinearGradient(0, 0, 0, 400);
         purple.addColorStop(0, '#db91fb');
         purple.addColorStop(1, '#b558f6');
-
         var data5 = {
             datasets: [{
-                data: [
-                    23,
-                    17,
-                    26,
-                    50,
-                ],
+                data: [23,17,26,50],
                 backgroundColor: [
                     yellow, // yellow
                     green, // green
@@ -472,7 +469,6 @@
                     purple, // violet
                 ],
                 label: 'Общий анализ', // for legend
-                borderWidth: 0
             }],
             labels: [
                 "Общий балл",

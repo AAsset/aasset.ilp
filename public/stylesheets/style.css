@@ -10853,10 +10853,14 @@ h1 {
     overflow-y: auto
 }
 
-.content .upper-head {
+.upper-head {
     margin-left: 15px;
     margin-right: 15px;
     margin-bottom: 2.5rem;
+}
+
+.upper-head > div:first-child {
+    margin-bottom: 0;
 }
 
 .content .timer img {
@@ -11312,11 +11316,6 @@ h1 {
     overflow-y: auto
 }
 
-.inside-object .upper-head {
-    margin-left: 15px;
-    margin-right: 15px
-}
-
 .inside-object .main-media-cover {
     width: calc(60% - 1.7rem);
     margin-right: 1.7rem
@@ -11621,11 +11620,6 @@ h1 {
     padding: 0 1.2rem
 }
 
-.my-profle .upper-head {
-    margin-left: 15px;
-    margin-right: 15px
-}
-
 .my-profle .form-control {
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -11742,7 +11736,7 @@ h1 {
 
 .my-profle .profile-information .photo-and-info img {
     width: 6.25rem;
-    height: 6.25rem !important;
+    height: 6.25rem;
     border-radius: 50%;
     margin-right: 1.8rem
 }
@@ -12443,11 +12437,6 @@ h1 {
     overflow-y: auto
 }
 
-.test .upper-head {
-    margin-left: 0;
-    margin-right: 0
-}
-
 .test .question-block {
     background: white;
     padding: 0 2.75rem 1.9rem 2.75rem;
@@ -12640,6 +12629,18 @@ h1 {
     .content .row .charts-2 .styled select {
         font-size: 0.75rem;
     }
+
+    .my-profle .stars-rating {
+        padding: 1.5rem;
+    }
+
+    .my-profle .stars-rating h2 {
+        font-size: 1.375rem;
+    }
+
+    .my-profle .stars-rating p {
+        font-size: .625rem;
+    }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -12720,6 +12721,57 @@ h1 {
         height: 2.1875rem;
     }
 
+    .my-profle .profile-information .photo-and-info img {
+        width: 5rem;
+        height: 5rem;
+        margin-right: 1rem;
+    }
+
+    .my-profle .profile-information h2, .my-profle .work-history .work h2 {
+        font-size: 0.75rem;
+    }
+
+    .my-profle .profile-information p, .my-profle .work-history .work .city {
+        font-size: 0.75rem;
+    }
+
+    .my-profle .stars-rating {
+        padding: 1.5rem;
+    }
+
+    .my-profle .personal-qualities h1 {
+        font-size: 1rem;
+    }
+
+    .my-profle .personal-qualities {
+        padding: 1rem;
+    }
+
+    .my-profle .personal-qualities .text-1 {
+        font-size: 0.625rem;
+    }
+
+    .my-profle .personal-qualities .percentage {
+        font-size: 0.625rem;
+    }
+
+    .my-profle .feedbacks h1, .my-profle .work-history h1, .my-profle .skills h2, .my-profle .experience h2 {
+        font-size: 1rem;
+    }
+
+    .my-profle .styled select {
+        font-size: 0.625rem;
+    }
+
+    .my-profle .feedbacks .feedback .avatar-image {
+        width: 2.1875rem;
+        height: 2.1875rem;
+    }
+
+    .my-profle .work-history .work .company-logo {
+        margin-right: .875rem;
+    }
+
     .test .flex-width {
         font-size: 1.125rem;
     }
@@ -12728,11 +12780,18 @@ h1 {
 @media (min-width: 768px) and (max-width: 991px) {
     .authorization {
         padding: 5rem;
+        /* background-image: url(../images/auth-bg-small.png); */
+        /* z-index: 2; */
         /* background-image: linear-gradient(to bottom, #ffffff, #eaf0fd); */
+    }
+
+    .auth-bottom img {
+        width: 80px;
     }
 
     .authorization .auth-block {
         padding: 5.3rem 4.375rem 5.75rem 4.375rem;
+        /* z-index: 1; */
     }
 
     .authorization .auth-block form {
@@ -12843,9 +12902,6 @@ h1 {
     .test,
     .my-profle {
         width: calc(100vw);
-    }
-
-    .content {
         padding: 1.75rem 0.8125rem;
     }
 
@@ -12923,14 +12979,19 @@ h1 {
     .test,
     .my-profle {
         width: calc(100vw);
+        padding: 9.375rem 0.8125rem 1.75rem 0.8125rem;
     }
 
-    .registration, .content .my-profle, .programms, .tests, .test, .inside-object{
+    .registration {
         padding: 1.875rem 0px;
     }
 
     .authorization {
         padding: 1.875rem 4.375rem;
+    }
+
+    .auth-bottom img {
+        width: 50px;
     }
 
     .authorization .auth-block {
@@ -13017,7 +13078,7 @@ h1 {
     .left-menu {
         left: -285px;
         position: fixed;
-        z-index: 1;
+        z-index: 999;
         transition: .3s;
     }
 
@@ -13049,6 +13110,18 @@ h1 {
 
     .head-title {
         font-size: 1.625rem;
+    }
+
+    .upper-head {
+        position: fixed;
+        margin: 0 0 0 -15px;
+        padding: 1.875rem;
+        background: #ffffff;
+        width: 100%;
+        top: 0;
+        box-shadow: 0 1px 10px 0 #d6dcea;
+        z-index: 998;
+        border-radius: 0 0 5px 5px;
     }
 
     .upper-head .timer p {
@@ -13110,6 +13183,10 @@ h1 {
 @media (max-width: 376px) {
     .authorization {
         padding: 1.25rem;
+    }
+
+    .auth-bottom img {
+        width: 50px;
     }
 
     .authorization .top-left-image {
@@ -13194,6 +13271,40 @@ h1 {
         width: 2rem;
         height: 2rem;
     }
+
+    .my-profle .profile-information .photo-and-info img {
+        width: 5rem;
+        height: 5rem;
+        margin-right: 1rem;
+    }
+
+    .my-profle .profile-information h2, .my-profle .work-history .work h2 {
+        font-size: 0.75rem;
+    }
+
+    .my-profle .profile-information p, .my-profle .work-history .work .city {
+        font-size: 0.75rem;
+    }
+
+    .my-profle .stars-rating h2 {
+        font-size: 1.375rem;
+    }
+
+    .my-profle .personal-qualities h1 {
+        font-size: 1rem;
+    }
+
+    .my-profle .feedbacks h1, .my-profle .work-history h1, .my-profle .skills h2, .my-profle .experience h2  {
+        font-size: 1rem;
+    }
+
+    .my-profle .styled select {
+        font-size: 0.625rem;
+    }
+
+    .my-profle .personal-qualities .text-1, .my-profle .personal-qualities .percentage {
+        font-size: 0.625rem;
+    }
 }
 
 @media (min-width: 768px){
@@ -13230,6 +13341,11 @@ h1 {
         border: 0;
         margin: 0 20%;
     }
+
+    .upper-head > div:first-child {
+        margin-bottom: 1.5rem;
+    }
+
 }
 
 .head-title {
