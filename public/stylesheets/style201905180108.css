@@ -11452,7 +11452,7 @@ h1 {
 }
 
 .inside-object .about-this .time-clock {
-    padding-right: 1.3rem;
+    padding: 0rem 1.3rem;
     white-space: nowrap
 }
 
