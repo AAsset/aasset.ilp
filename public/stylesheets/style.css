@@ -11378,12 +11378,17 @@ h1 {
     cursor: pointer;
     background: #29cb97;
     border-radius: 50%;
-    height: 2.5rem;
-    width: 2.5rem
+    height: auto;
+    width: auto;
+}
+
+.inside-object .tasks .logo-file label {
+    margin-bottom: 0;
 }
 
 .inside-object .tasks .logo-file img {
     cursor: pointer;
+    padding: 16px 17px;
 }
 
 .inside-object .tasks .logo-file svg {
@@ -12905,6 +12910,14 @@ h1 {
         padding: 1.75rem 0.8125rem;
     }
 
+    .authorization {
+        padding: 1.25rem;
+    }
+
+    .auth-bottom img {
+        width: 50px;
+    }
+
     .mobile-menu {
         display: block !important;
         padding: 0 !important;
@@ -13325,6 +13338,7 @@ h1 {
     .menu-header-usual {
         display: none !important
     }
+
     .programms .menu-header .active {
         border-bottom: 0px !important;
     }
@@ -13345,7 +13359,6 @@ h1 {
     .upper-head > div:first-child {
         margin-bottom: 1.5rem;
     }
-
 }
 
 .head-title {
