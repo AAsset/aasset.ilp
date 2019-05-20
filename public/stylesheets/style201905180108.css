@@ -11392,8 +11392,12 @@ h1 {
 }
 
 .inside-object .tasks .logo-file svg {
-    height: 1rem;
-    width: 1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: auto;
+    height: auto;
+    padding: 16px 17px;
     -o-object-fit: contain;
     object-fit: contain
 }
